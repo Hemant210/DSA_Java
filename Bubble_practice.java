@@ -1,4 +1,5 @@
 //We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
+import java.util.*;
 // public class Bubble_practice {
 //     public static void main(String[] args) {
 //         int[] num = {2, 0, 2, 1, 1, 0};  
@@ -28,7 +29,7 @@
 //     }
 // }
 
-import java.util.*;
+//Since the result may be very large, so you need to return a string instead of an integer.
 public class Bubble_practice {
     public static String largestNumber(int[] nums) {
         String[] strNums = new String[nums.length];
