@@ -28,7 +28,7 @@ import java.util.*;
 //     }
 // }    
 
-//descending order 
+//Descending order 
 public class Bubble_sort {
 
     public static void printArray(int arr[]) {
