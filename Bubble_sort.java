@@ -27,12 +27,12 @@
 
 //         printArray(arr);
 //     }
-// }
+// }    
 
-//descending order
+//descending order 
 import java.util.*;
 
-public class Sorting {
+public class Bubble_sort {
 
     public static void printArray(int arr[]) {
         for(int i = 0; i < arr.length; i++) {
