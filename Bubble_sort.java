@@ -1,6 +1,5 @@
 // //Ascending order
-// import java.util.*;
-
+import java.util.*;
 // public class Sorting {
 
 //     public static void printArray(int arr[]) {
@@ -30,8 +29,6 @@
 // }    
 
 //descending order 
-import java.util.*;
-
 public class Bubble_sort {
 
     public static void printArray(int arr[]) {
