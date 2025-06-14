@@ -1,4 +1,4 @@
-public class Merge_sort {
+public class Merged_sort {
     public static void conquer(int arr[], int si,int mid, int ei){
         int merged[] = new int[ei - si + 1];
 
@@ -17,7 +17,7 @@ public class Merge_sort {
         while (idx1 <= mid) {
             merged[x++] = arr[idx1++];
         }
-        while (idx1 <= mid) {
+        while (idx2 <= ei) {
             merged[x++] = arr[idx2++];
         }
 
@@ -37,13 +37,13 @@ public class Merge_sort {
         conquer(arr, si, mid, ei);
     }
 
-    public static void main(String args){
+    public static void main(String[] args){
         int arr[] = {6,3,9,5,2,8};
         int n = arr.length;
 
         divide(arr, 0, n-1);
-        for(int i=0; i<n; i++){
-            System.out.println(arr[i]+ "");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
