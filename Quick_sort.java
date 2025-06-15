@@ -3,7 +3,7 @@ public class Quick_sort {
         int pivot = arr[high];
         int i = low-1;
 
-        for(int j=low; j<high; j++){
+        for(int j=low; j < high; j++){
             if(arr[j] < pivot){
                 i++;
                 //swap
@@ -18,7 +18,7 @@ public class Quick_sort {
         arr[high] = temp;
         return i; 
     }
-    
+
     public static void quicksort(int arr[], int low, int high){
         if(low < high){
             int pidx = partication(arr, low, high);
