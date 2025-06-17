@@ -30,28 +30,32 @@ import java.util.*;
 // }
 
 //Since the result may be very large, so you need to return a string instead of an integer.
+// public class Bubble_practice {
+//     public static String largestNumber(int[] nums) {
+//         String[] strNums = new String[nums.length];
+//         for (int i = 0; i < nums.length; i++) {
+//             strNums[i] = String.valueOf(nums[i]);
+//         }
+//         Arrays.sort(strNums, (a, b) -> (b + a).compareTo(a + b));
+
+//         // If highest number is 0, all are 0
+//         if (strNums[0].equals("0")) {
+//             return "0";
+//         }
+//         StringBuilder sb = new StringBuilder();
+//         for (String s : strNums) {
+//             sb.append(s);
+//         }
+
+//         return sb.toString();
+//     }
+//     public static void main(String[] args) {
+//         int[] nums2 = {3, 30, 34, 5, 9};
+
+//         System.out.println("Output 2: " + largestNumber(nums2)); // Output: 9534330
+//     }
+// }
+
 public class Bubble_practice {
-    public static String largestNumber(int[] nums) {
-        String[] strNums = new String[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            strNums[i] = String.valueOf(nums[i]);
-        }
-        Arrays.sort(strNums, (a, b) -> (b + a).compareTo(a + b));
-
-        // If highest number is 0, all are 0
-        if (strNums[0].equals("0")) {
-            return "0";
-        }
-        StringBuilder sb = new StringBuilder();
-        for (String s : strNums) {
-            sb.append(s);
-        }
-
-        return sb.toString();
-    }
-    public static void main(String[] args) {
-        int[] nums2 = {3, 30, 34, 5, 9};
-
-        System.out.println("Output 2: " + largestNumber(nums2)); // Output: 9534330
-    }
+    
 }

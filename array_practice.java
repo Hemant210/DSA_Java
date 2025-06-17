@@ -52,14 +52,14 @@ public class array_practice{
                 }
             }
     
-            return ans; // This works because LeetCode guarantees a majority exists
+            return ans; 
         }
         
 
     public static void main(String[] args) {
         array_practice ap = new array_practice();
 
-        int[] nums = {3,2,3}; // Example with 8 as majority
+        int[] nums = {3,2,3}; 
         int result = ap.majorityElement(nums);
 
         if (result != -1) {
