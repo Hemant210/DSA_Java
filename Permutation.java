@@ -1,5 +1,4 @@
 // Java Program to find the next permutation of a number array
-import java.util.*;
 public class Permutation {
 
     public void nextPermutation(int[] nums) {
