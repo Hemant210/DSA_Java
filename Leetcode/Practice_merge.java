@@ -1,7 +1,7 @@
 package Leetcode;
 
 //88. Merge Sorted Array
-public class Practice {
+public class Practice_merge {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
             int idx = m + n - 1;
             int i = m - 1;
@@ -21,7 +21,7 @@ public class Practice {
         }
 
         public static void main(String[] args){
-            Practice p = new Practice();
+            Practice_merge p = new Practice_merge();
 
             int[] nums1 = {1, 2, 3, 0, 0, 0};
             int[] nums2 = {2, 5, 6};
