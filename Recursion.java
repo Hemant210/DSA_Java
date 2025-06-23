@@ -13,24 +13,41 @@
 // }
 
 // Factorial using recursion
-class FDS{
+// class FDS{
 
-    int fact(int n)
-    {
-        int result;
-        if(n == 1)
-            return 1;
-        result = (n - 1) * n;
-        return result;
+//     int fact(int n)
+//     {
+//         int result;
+//         if(n == 1)
+//             return 1;
+//         result = (n - 1) * n;
+//         return result;
         
-    }
-}
+//     }
+// }
+// public class Recursion {
+
+//     public static void main(String[] args)
+//     {
+//         FDS f = new FDS();
+//         System.out.println(f.fact(5));
+//     }
+// }
+
+//Sum of number
 public class Recursion {
+    public static void printNum(int i, int n, int sum){
+        if(i == n){
+          sum += i;
+          System.out.println(sum);
+          return;  
+        }
+        sum += i;
+        printNum(i+1, n, sum);
 
-    public static void main(String[] args)
-    {
-        FDS f = new FDS();
-        System.out.println(f.fact(5));
+    }
+
+    public static void main(String[] args) {
+        printNum(1, 5, 0);
     }
 }
-
