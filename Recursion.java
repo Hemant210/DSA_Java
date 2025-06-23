@@ -70,21 +70,39 @@
 // }
 
 //Fibonnacci sequence
-public class Recursion {
-    public static void Fibonnacci(int a, int b, int n){
-        if(n == 0){
-            return;
-        }
-        int c = a + b;
-        System.out.println(c);
-        Fibonnacci(b, c, n - 1);
-    }
+// public class Recursion {
+//     public static void Fibonnacci(int a, int b, int n){
+//         if(n == 0){
+//             return;
+//         }
+//         int c = a + b;
+//         System.out.println(c);
+//         Fibonnacci(b, c, n - 1);
+//     }
 
+//     public static void main(String[] args) {
+//         int a = 0, b = 1;
+//         System.out.println(a);
+//         System.out.println(b);
+//         int n = 7;
+//         Fibonnacci(a, b, n - 2);
+//     }
+// }
+
+public class Recursion {
+    public static int printx(int x, int n){
+        if(x == 0){
+            return 0;
+        }
+        if(n == 0){
+            return 1;
+        }
+        int x_power = printx(x, n-1);
+        int x_pown = x * x_power;
+        return x_pown;
+    }
     public static void main(String[] args) {
-        int a = 0, b = 1;
-        System.out.println(a);
-        System.out.println(b);
-        int n = 7;
-        Fibonnacci(a, b, n - 2);
+        int x = 2, n = 5;
+        System.out.println(printx(x, n));
     }
 }
