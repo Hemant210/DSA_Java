@@ -53,18 +53,38 @@
 // }
 
 //Practice factorial no
-public class Recursion{
-    public static int printcal(int n){
-        if(n == 1 || n == 0){
-            return 1;
+// public class Recursion{
+//     public static int printcal(int n){
+//         if(n == 1 || n == 0){
+//             return 1;
+//         }
+//         int print_n = printcal(n-1);
+//         int final_m = n * print_n;
+//         return final_m;
+//     }
+//     public static void main(String[] args) {
+//         int n = 5;
+//         int ans = printcal(n);
+//         System.out.println(ans);
+//     }
+// }
+
+//Fibonnacci sequence
+public class Recursion {
+    public static void Fibonnacci(int a, int b, int n){
+        if(n == 0){
+            return;
         }
-        int print_n = printcal(n-1);
-        int final_m = n * print_n;
-        return final_m;
+        int c = a + b;
+        System.out.println(c);
+        Fibonnacci(b, c, n - 1);
     }
+
     public static void main(String[] args) {
-        int n = 5;
-        int ans = printcal(n);
-        System.out.println(ans);
+        int a = 0, b = 1;
+        System.out.println(a);
+        System.out.println(b);
+        int n = 7;
+        Fibonnacci(a, b, n - 2);
     }
 }
