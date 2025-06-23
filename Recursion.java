@@ -89,6 +89,26 @@
 //     }
 // }
 
+//x^n (stack heigth n)
+// public class Recursion {
+//     public static int printx(int x, int n){
+//         if(x == 0){
+//             return 0;
+//         }
+//         if(n == 0){
+//             return 1;
+//         }
+//         int x_power = printx(x, n-1);
+//         int x_pown = x * x_power;
+//         return x_pown;
+//     }
+//     public static void main(String[] args) {
+//         int x = 2, n = 5;
+//         System.out.println(printx(x, n));
+//     }
+// }
+
+//x^n (stack heigth = logn)
 public class Recursion {
     public static int printx(int x, int n){
         if(x == 0){
@@ -97,12 +117,14 @@ public class Recursion {
         if(n == 0){
             return 1;
         }
-        int x_power = printx(x, n-1);
-        int x_pown = x * x_power;
-        return x_pown;
+        if( n % 2 == 0){//Even number
+            return printx(x, n/2) * printx(x, n/2);
+        }else{//Odd number
+            return printx(x, n/2) * printx(x, n/2) * x;
+        }    
     }
     public static void main(String[] args) {
-        int x = 2, n = 5;
+        int x = 2, n = 8;
         System.out.println(printx(x, n));
     }
 }
