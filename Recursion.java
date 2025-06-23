@@ -34,20 +34,37 @@
 //     }
 // }
 
-//Sum of number
-public class Recursion {
-    public static void printNum(int i, int n, int sum){
-        if(i == n){
-          sum += i;
-          System.out.println(sum);
-          return;  
+//Sum of N natural number
+// public class Recursion {
+//     public static void printNum(int i, int n, int sum){
+//         if(i == n){
+//           sum += i;
+//           System.out.println(sum);
+//           return;  
+//         }
+//         sum += i;
+//         printNum(i+1, n, sum);
+//         System.out.println(i);
+//     }
+
+//     public static void main(String[] args) {
+//         printNum(1, 5, 0);
+//     }
+// }
+
+//Practice factorial no
+public class Recursion{
+    public static int printcal(int n){
+        if(n == 1 || n == 0){
+            return 1;
         }
-        sum += i;
-        printNum(i+1, n, sum);
-
+        int print_n = printcal(n-1);
+        int final_m = n * print_n;
+        return final_m;
     }
-
     public static void main(String[] args) {
-        printNum(1, 5, 0);
+        int n = 5;
+        int ans = printcal(n);
+        System.out.println(ans);
     }
 }
