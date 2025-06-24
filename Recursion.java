@@ -109,22 +109,38 @@
 // }
 
 //x^n (stack heigth = logn)
+// public class Recursion {
+//     public static int printx(int x, int n){
+//         if(x == 0){
+//             return 0;
+//         }
+//         if(n == 0){
+//             return 1;
+//         }
+//         if( n % 2 == 0){//Even number
+//             return printx(x, n/2) * printx(x, n/2);
+//         }else{//Odd number
+//             return printx(x, n/2) * printx(x, n/2) * x;
+//         }    
+//     }
+//     public static void main(String[] args) {
+//         int x = 2, n = 8;
+//         System.out.println(printx(x, n));
+//     }
+// }
+
+// Function to check sum 
 public class Recursion {
-    public static int printx(int x, int n){
-        if(x == 0){
+
+    public static int Sum_number(int n){
+        if(n == 0)
             return 0;
-        }
-        if(n == 0){
-            return 1;
-        }
-        if( n % 2 == 0){//Even number
-            return printx(x, n/2) * printx(x, n/2);
-        }else{//Odd number
-            return printx(x, n/2) * printx(x, n/2) * x;
-        }    
+            return (n % 10 + Sum_number(n/10));
+        
     }
+
     public static void main(String[] args) {
-        int x = 2, n = 8;
-        System.out.println(printx(x, n));
+        int num = 13654;
+        System.out.println("Total sum of all number :- " + Sum_number(num));
     }
 }
