@@ -56,21 +56,48 @@ package Leetcode;
 // }
 
 //Check array is sorted 
+//Time complexity  = O(n)
+// public class Recursion_practice {
+//     public static boolean check_sort(int idx, int arr[]){
+//         if(idx == arr.length - 1){
+//             return true;
+//         }
+//         if(arr[idx] >= arr[idx + 1]){
+//             return false;
+//         }else{
+//             return check_sort(idx + 1, arr);
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         int arr[] = {1,3,2,6};
+//         System.out.println(check_sort(0, arr));
+
+//     }
+// }
+
+//Moce all X at end of String
+//Time complexity  = O(n)
 public class Recursion_practice {
-    public static boolean check_sort(int idx, int arr[]){
-        if(idx == arr.length - 1){
-            return true;
+    public static void x_move(int idx, String str, int count, String newString){
+        if(idx == str.length()) {
+            for(int i = 0; i < count; i++){
+                newString += 'x';
+            }
+            System.out.println(newString);
+            return;
         }
-        if(arr[idx] >= arr[idx + 1]){
-            return false;
+        char current_char = str.charAt(idx);
+        if(current_char == 'x'){
+            count++;
+            x_move(idx + 1, str, count, newString);
         }else{
-            return check_sort(idx + 1, arr);
+            newString = newString + current_char;
+            x_move(idx+1, str, count, newString);
         }
     }
-
     public static void main(String[] args) {
-        int arr[] = {1,3,2,6};
-        System.out.println(check_sort(0, arr));
-
+        String str = "axbxxd";
+        x_move(0, str, 0, "");
     }
 }
