@@ -37,20 +37,40 @@ package Leetcode;
 // }
 
 //1st & last occurance of an element in string 
+// public class Recursion_practice {
+//     public static void print_occ(int idx, String str){
+//         if(idx == str.length()){
+//             return;
+//         }
+
+//         if(str.charAt(idx) == 'a'){
+//             System.out.println("'a' found at index: " + idx);
+//         }
+
+//         print_occ(idx + 1, str);
+//     }
+//     public static void main(String[] args) {
+//         String str = "abaacdefaahb";
+//         print_occ(0, str);
+//     }
+// }
+
+//Check array is sorted 
 public class Recursion_practice {
-    public static void print_occ(int idx, String str){
-        if(idx == str.length()){
-            return;
+    public static boolean check_sort(int idx, int arr[]){
+        if(idx == arr.length - 1){
+            return true;
         }
-
-        if(str.charAt(idx) == 'a'){
-            System.out.println("'a' found at index: " + idx);
+        if(arr[idx] >= arr[idx + 1]){
+            return false;
+        }else{
+            return check_sort(idx + 1, arr);
         }
-
-        print_occ(idx + 1, str);
     }
+
     public static void main(String[] args) {
-        String str = "abaacdefaahb";
-        print_occ(0, str);
+        int arr[] = {1,3,2,6};
+        System.out.println(check_sort(0, arr));
+
     }
 }
