@@ -1,5 +1,7 @@
 package Leetcode;
 
+import java.util.HashSet;
+
 //Tower of Hanoi
 //Time complexity 
 // public class Recursion_practice {
@@ -129,23 +131,52 @@ package Leetcode;
 //     }
 // }
 
+//Important for interview
 //Print all the subsequences of String
 //Time Complexity: O(2n)
+// public class Recursion_practice {
+//     public static void subsequences(String str, int idx, String newString){
+//         if(idx == str.length()){
+//             System.out.println(newString);
+//             return;
+//         }
+//         char current_char = str.charAt(idx);
+//         //To be
+//         subsequences(str, idx + 1, newString + current_char);
+
+//         //Not to be
+//         subsequences(str, idx + 1, newString);
+//     }
+//     public static void main(String[] args) {
+//         String str = "abc";
+//         subsequences(str, 0, "");
+//     }
+// }
+
+//Print all the unique subsequences of String
+//Time Complexity: O(2n)
+import java.util.HashSet;
+
 public class Recursion_practice {
-    public static void subsequences(String str, int idx, String newString){
+    public static void subsequences(String str, int idx, String newString, HashSet<String> set){
         if(idx == str.length()){
+            if(set.contains(newString)){
+                return;
+            }
             System.out.println(newString);
+            set.add(newString);
             return;
         }
         char current_char = str.charAt(idx);
         //To be
-        subsequences(str, idx + 1, newString + current_char);
+        subsequences(str, idx + 1, newString + current_char, set);
 
         //Not to be
-        subsequences(str, idx + 1, newString);
+        subsequences(str, idx + 1, newString, set);
     }
     public static void main(String[] args) {
-        String str = "abc";
-        subsequences(str, 0, "");
+        String str = "aaa";
+        HashSet<String> set = new HashSet<>();
+        subsequences(str, 0, "", set);
     }
 }
