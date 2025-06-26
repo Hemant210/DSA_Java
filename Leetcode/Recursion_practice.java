@@ -155,28 +155,50 @@ import java.util.HashSet;
 
 //Print all the unique subsequences of String
 //Time Complexity: O(2n)
-import java.util.HashSet;
+// import java.util.HashSet;
+
+// public class Recursion_practice {
+//     public static void subsequences(String str, int idx, String newString, HashSet<String> set){
+//         if(idx == str.length()){
+//             if(set.contains(newString)){
+//                 return;
+//             }
+//             System.out.println(newString);
+//             set.add(newString);
+//             return;
+//         }
+//         char current_char = str.charAt(idx);
+//         //To be
+//         subsequences(str, idx + 1, newString + current_char, set);
+
+//         //Not to be
+//         subsequences(str, idx + 1, newString, set);
+//     }
+//     public static void main(String[] args) {
+//         String str = "aaa";
+//         HashSet<String> set = new HashSet<>();
+//         subsequences(str, 0, str, set);
+//     }
+// }
 
 public class Recursion_practice {
-    public static void subsequences(String str, int idx, String newString, HashSet<String> set){
+    public static String[] keypad = {".", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tu" ,"vwz", "yz"};
+
+    public static void print_comb(String str, int idx, String Combilnation){
         if(idx == str.length()){
-            if(set.contains(newString)){
-                return;
-            }
-            System.out.println(newString);
-            set.add(newString);
+            System.out.println(Combilnation);
             return;
         }
         char current_char = str.charAt(idx);
-        //To be
-        subsequences(str, idx + 1, newString + current_char, set);
+        String mapping = keypad[current_char - '0'];
 
-        //Not to be
-        subsequences(str, idx + 1, newString, set);
+        for(int i=0; i<mapping.length(); i++){
+            print_comb(str, idx+1, Combilnation+mapping.charAt(i));
+        }
     }
+
     public static void main(String[] args) {
-        String str = "aaa";
-        HashSet<String> set = new HashSet<>();
-        subsequences(str, 0, "", set);
+        String str = "23";
+        print_comb(str, 0, "");
     }
 }
