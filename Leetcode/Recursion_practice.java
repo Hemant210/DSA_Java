@@ -76,28 +76,55 @@ package Leetcode;
 //     }
 // }
 
-//Moce all X at end of String
+//Move all X at end of String
 //Time complexity  = O(n)
+// public class Recursion_practice {
+//     public static void x_move(int idx, String str, int count, String newString){
+//         if(idx == str.length()) {
+//             for(int i = 0; i < count; i++){
+//                 newString += 'x';
+//             }
+//             System.out.println(newString);
+//             return;
+//         }
+//         char current_char = str.charAt(idx);
+//         if(current_char == 'x'){
+//             count++;
+//             x_move(idx + 1, str, count, newString);
+//         }else{
+//             newString = newString + current_char;
+//             x_move(idx+1, str, count, newString);
+//         }
+//     }
+//     public static void main(String[] args) {
+//         String str = "axbxxd";
+//         x_move(0, str, 0, "");
+//     }
+// }
+
+//Remove all duplicates
 public class Recursion_practice {
-    public static void x_move(int idx, String str, int count, String newString){
-        if(idx == str.length()) {
-            for(int i = 0; i < count; i++){
-                newString += 'x';
-            }
+    public static boolean[] map = new boolean[26];
+
+    public static void remove_duplicate(String str, int idx, String newString){
+        if(idx == str.length()){
             System.out.println(newString);
             return;
         }
+
         char current_char = str.charAt(idx);
-        if(current_char == 'x'){
-            count++;
-            x_move(idx + 1, str, count, newString);
+        if(map[current_char - 'a'] == true){
+            remove_duplicate(str, idx+1, newString);
         }else{
-            newString = newString + current_char;
-            x_move(idx+1, str, count, newString);
+            newString += current_char;
+            map[current_char - 'a'] = true;
+            remove_duplicate(str, idx+1, newString);
         }
     }
+
     public static void main(String[] args) {
         String str = "axbxxd";
-        x_move(0, str, 0, "");
+        remove_duplicate(str, 0, "");
+        
     }
 }
