@@ -103,28 +103,49 @@ package Leetcode;
 // }
 
 //Remove all duplicates
-public class Recursion_practice {
-    public static boolean[] map = new boolean[26];
+// public class Recursion_practice {
+//     public static boolean[] map = new boolean[26];
 
-    public static void remove_duplicate(String str, int idx, String newString){
+//     public static void remove_duplicate(String str, int idx, String newString){
+//         if(idx == str.length()){
+//             System.out.println(newString);
+//             return;
+//         }
+
+//         char current_char = str.charAt(idx);
+//         if(map[current_char - 'a'] == true){
+//             remove_duplicate(str, idx+1, newString);
+//         }else{
+//             newString += current_char;
+//             map[current_char - 'a'] = true;
+//             remove_duplicate(str, idx+1, newString);
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "axbxxd";
+//         remove_duplicate(str, 0, "");
+        
+//     }
+// }
+
+//Print all the subsequences of String
+//Time Complexity: O(2n)
+public class Recursion_practice {
+    public static void subsequences(String str, int idx, String newString){
         if(idx == str.length()){
             System.out.println(newString);
             return;
         }
-
         char current_char = str.charAt(idx);
-        if(map[current_char - 'a'] == true){
-            remove_duplicate(str, idx+1, newString);
-        }else{
-            newString += current_char;
-            map[current_char - 'a'] = true;
-            remove_duplicate(str, idx+1, newString);
-        }
-    }
+        //To be
+        subsequences(str, idx + 1, newString + current_char);
 
+        //Not to be
+        subsequences(str, idx + 1, newString);
+    }
     public static void main(String[] args) {
-        String str = "axbxxd";
-        remove_duplicate(str, 0, "");
-        
+        String str = "abc";
+        subsequences(str, 0, "");
     }
 }
