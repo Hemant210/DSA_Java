@@ -253,26 +253,43 @@ package Practice;
 // }
 
 //Tiles size 1xm in floor of size nxm n=4, m = 2
+// public class Recursion_practice {
+//     public static int place_tiles(int n, int m){
+//         if(n == m){
+//             return 2;
+//         }
+
+//         if(n < m){
+//             return 1;
+//         }
+
+//         //vetical
+//         int vertical_place = place_tiles(n-m, m);
+
+//         //Horizontally
+//         int Horizontally_place = place_tiles(n-1, m);
+//         return vertical_place + Horizontally_place;
+//     }
+
+//     public static void main(String[] args) {
+//         int n = 4, m = 2;
+//         System.out.println(place_tiles(n, m));
+//     }
+// }
+
+//Sum of natural number
 public class Recursion_practice {
-    public static int place_tiles(int n, int m){
-        if(n == m){
-            return 2;
+    public static String reverse_print(String str){
+        if(str.isEmpty())
+        return str;
+        else{
+            char current_char = str.charAt(0);
+            return reverse_print(str.substring(1)) + current_char;
         }
-
-        if(n < m){
-            return 1;
-        }
-
-        //vetical
-        int vertical_place = place_tiles(n-m, m);
-
-        //Horizontally
-        int Horizontally_place = place_tiles(n-1, m);
-        return vertical_place + Horizontally_place;
     }
-
+    
     public static void main(String[] args) {
-        int n = 4, m = 2;
-        System.out.println(place_tiles(n, m));
+        String str = "Geeksforgeeks";
+        System.out.println(reverse_print(str));
     }
 }
