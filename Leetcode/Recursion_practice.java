@@ -205,22 +205,48 @@ package Leetcode;
 // }
 
 //Print al permutations of the String
-public class Recursion_practice {
-    public static void print_permutations(String str, String newString){
-        if(str.length() == 0){
-            System.out.println(newString);
-            return;
-        }
-        for(int i=0; i<str.length(); i++){
-            char current_char = str.charAt(i);
-            String newStr = str.substring(0, i) + str.substring(i+1);
-            print_permutations(newStr, newString + current_char);
+//Time Complexity: O(n!)
+// public class Recursion_practice {
+//     public static void print_permutations(String str, String newString){
+//         if(str.length() == 0){
+//             System.out.println(newString);
+//             return;
+//         }
+//         for(int i=0; i<str.length(); i++){
+//             char current_char = str.charAt(i);
+//             String newStr = str.substring(0, i) + str.substring(i+1);
+//             print_permutations(newStr, newString + current_char);
 
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "abc";
+//         print_permutations(str, "");
+//     }
+// }
+
+//Total paths in a maze to move from (0,0) to (n,m)
+public class Recursion_practice {
+    public static int print_maze(int i,int j, int n, int m){
+        if(i == n || j == m){
+            return 0;
         }
+        if(i == n-1 && j == m-1){
+            return 1;
+        }
+        //move downwards
+        int downPaths = print_maze(i+1, j, n, m);
+
+        //move right
+        int rightPaths = print_maze(i, j+1, n, m);
+        return downPaths + rightPaths;
     }
 
     public static void main(String[] args) {
-        String str = "abc";
-        print_permutations(str, "");
+        int n = 3, m = 3;
+         int totalPaths = print_maze(0, 0, n, m);
+         System.out.println(totalPaths);
+        
     }
 }
