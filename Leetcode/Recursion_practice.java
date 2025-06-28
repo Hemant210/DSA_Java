@@ -3,7 +3,7 @@ package Leetcode;
 // import java.util.HashSet;
 
 //Tower of Hanoi
-//Time complexity 
+//Time complexity
 // public class Recursion_practice {
 //     public static void print_hanoi(int n,String src,String help,String dest){
 //         if(n == 1){
@@ -38,7 +38,7 @@ package Leetcode;
 //      }
 // }
 
-//1st & last occurance of an element in string 
+//1st & last occurance of an element in string
 // public class Recursion_practice {
 //     public static void print_occ(int idx, String str){
 //         if(idx == str.length()){
@@ -57,7 +57,7 @@ package Leetcode;
 //     }
 // }
 
-//Check array is sorted 
+//Check array is sorted
 //Time complexity  = O(n)
 // public class Recursion_practice {
 //     public static boolean check_sort(int idx, int arr[]){
@@ -127,7 +127,7 @@ package Leetcode;
 //     public static void main(String[] args) {
 //         String str = "axbxxd";
 //         remove_duplicate(str, 0, "");
-        
+
 //     }
 // }
 
@@ -227,26 +227,52 @@ package Leetcode;
 // }
 
 //Total paths in a maze to move from (0,0) to (n,m)
+//Time Complexity: O(n!)
+// public class Recursion_practice {
+//     public static int print_maze(int i,int j, int n, int m){
+//         if(i == n || j == m){
+//             return 0;
+//         }
+//         if(i == n-1 && j == m-1){
+//             return 1;
+//         }
+//         //move downwards
+//         int downPaths = print_maze(i+1, j, n, m);
+
+//         //move right
+//         int rightPaths = print_maze(i, j+1, n, m);
+//         return downPaths + rightPaths;
+//     }
+
+//     public static void main(String[] args) {
+//         int n = 3, m = 3;
+//          int totalPaths = print_maze(0, 0, n, m);
+//          System.out.println(totalPaths);
+
+//     }
+// }
+
+//Tiles size 1xm in floor of size nxm n=4, m = 2
 public class Recursion_practice {
-    public static int print_maze(int i,int j, int n, int m){
-        if(i == n || j == m){
-            return 0;
+    public static int place_tiles(int n, int m){
+        if(n == m){
+            return 2;
         }
-        if(i == n-1 && j == m-1){
+
+        if(n < m){
             return 1;
         }
-        //move downwards
-        int downPaths = print_maze(i+1, j, n, m);
 
-        //move right
-        int rightPaths = print_maze(i, j+1, n, m);
-        return downPaths + rightPaths;
+        //vetical
+        int vertical_place = place_tiles(n-m, m);
+
+        //Horizontally
+        int Horizontally_place = place_tiles(n-1, m);
+        return vertical_place + Horizontally_place;
     }
 
     public static void main(String[] args) {
-        int n = 3, m = 3;
-         int totalPaths = print_maze(0, 0, n, m);
-         System.out.println(totalPaths);
-        
+        int n = 4, m = 2;
+        System.out.println(place_tiles(n, m));
     }
 }
