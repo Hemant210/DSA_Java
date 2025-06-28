@@ -182,24 +182,45 @@ package Leetcode;
 // }
 
 //Print Keypad Combilnation
-public class Recursion_practice {
-    public static String[] keypad = {".", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tu" ,"vwz", "yz"};
+// public class Recursion_practice {
+//     public static String[] keypad = {".", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tu" ,"vwz", "yz"};
 
-    public static void print_comb(String str, int idx, String Combilnation){
-        if(idx == str.length()){
-            System.out.println(Combilnation);
+//     public static void print_comb(String str, int idx, String Combilnation){
+//         if(idx == str.length()){
+//             System.out.println(Combilnation);
+//             return;
+//         }
+//         char current_char = str.charAt(idx);
+//         String mapping = keypad[current_char - '0'];
+
+//         for(int i=0; i<mapping.length(); i++){
+//             print_comb(str, idx+1, Combilnation+mapping.charAt(i));
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         String str = "23";
+//         print_comb(str, 0, "");
+//     }
+// }
+
+//Print al permutations of the String
+public class Recursion_practice {
+    public static void print_permutations(String str, String newString){
+        if(str.length() == 0){
+            System.out.println(newString);
             return;
         }
-        char current_char = str.charAt(idx);
-        String mapping = keypad[current_char - '0'];
+        for(int i=0; i<str.length(); i++){
+            char current_char = str.charAt(i);
+            String newStr = str.substring(0, i) + str.substring(i+1);
+            print_permutations(newStr, newString + current_char);
 
-        for(int i=0; i<mapping.length(); i++){
-            print_comb(str, idx+1, Combilnation+mapping.charAt(i));
         }
     }
 
     public static void main(String[] args) {
-        String str = "23";
-        print_comb(str, 0, "");
+        String str = "abc";
+        print_permutations(str, "");
     }
 }
