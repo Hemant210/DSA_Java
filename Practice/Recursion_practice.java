@@ -278,18 +278,40 @@ package Practice;
 // }
 
 //Sum of natural number
-public class Recursion_practice {
-    public static String reverse_print(String str){
-        if(str.isEmpty())
-        return str;
-        else{
-            char current_char = str.charAt(0);
-            return reverse_print(str.substring(1)) + current_char;
-        }
-    }
+// public class Recursion_practice {
+//     public static String reverse_print(String str){
+//         if(str.isEmpty())
+//         return str;
+//         else{
+//             char current_char = str.charAt(0);
+//             return reverse_print(str.substring(1)) + current_char;
+//         }
+//     }
     
+//     public static void main(String[] args) {
+//         String str = "Geeksforgeeks";
+//         System.out.println(reverse_print(str));
+//     }
+// }
+
+//single or in pairs invite people to party
+public class Recursion_practice {
+    public static int call_guest(int n){
+        if (n <= 1) {
+            return 1;
+        }
+        
+        //Single
+        int way1 = call_guest(n-1);
+
+        //pairzs
+        int way2 = (n-1) * call_guest(n-2);
+
+        return way1 + way2;
+    }
+
     public static void main(String[] args) {
-        String str = "Geeksforgeeks";
-        System.out.println(reverse_print(str));
+        int n = 4;
+        System.out.println("Total way to invite guest :- " + call_guest(n));
     }
 }
