@@ -321,31 +321,66 @@ import java.util.*;
 
 //Print all subset of set of first natural number
 //Time Complexity: O(2^n)
+// public class Recursion_practice {
+//     public static void printsubset(ArrayList<Integer> subset){
+//         for(int i = 0; i<subset.size(); i++){
+//             System.out.print(subset.get(i)+ " ");
+//         }
+//         System.out.println();
+//     }
+//     public static void subset_n(int n, ArrayList<Integer> subset){
+//         if(n == 0){
+//             printsubset(subset);
+//             return;
+//         }
+
+//         //all
+//         subset.add(n);
+//         subset_n(n-1, subset);
+
+//         //
+//         subset.remove(subset.size()-1);
+//         subset_n(n-1, subset);
+//     }
+    
+//     public static void main(String[] args) {
+//         int n = 5;
+//         ArrayList<Integer> subset = new ArrayList<>();
+//         subset_n(n, subset);
+//     }
+// }
+
+//Print all number of subset natural number
 public class Recursion_practice {
-    public static void printsubset(ArrayList<Integer> subset){
-        for(int i = 0; i<subset.size(); i++){
-            System.out.print(subset.get(i)+ " ");
+    public static void printsub(ArrayList<Integer> subset){
+        for(int i = 0; i < subset.size(); i++){
+            System.out.print(subset.get(i) + " ");
         }
         System.out.println();
+
     }
-    public static void subset_n(int n, ArrayList<Integer> subset){
-        if(n == 0){
-            printsubset(subset);
-            return;
+
+    public static int subset_n(int n,ArrayList<Integer> subset){
+        if(n == 0) {
+            // printsubset(subset); // Optional
+            return 1; // One valid subset
         }
-
-        //all
-        subset.add(n);
-        subset_n(n-1, subset);
-
-        //
-        subset.remove(subset.size()-1);
-        subset_n(n-1, subset);
-    }
     
+        // Include current number
+        subset.add(n);
+        int count1 = subset_n(n-1, subset);
+    
+        // Exclude current number
+        subset.remove(subset.size() - 1);
+        int count2 = subset_n(n-1, subset);
+    
+        return count1 + count2;
+    }
+
     public static void main(String[] args) {
         int n = 5;
         ArrayList<Integer> subset = new ArrayList<>();
-        subset_n(n, subset);
+        int total_sub = subset_n(n, subset);
+        System.out.println("Total number of Subset :- " + total_sub);
     }
 }
