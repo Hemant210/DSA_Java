@@ -1,5 +1,7 @@
 package Practice;
 
+import java.util.ArrayList;
+import java.util.*;
 // import java.util.HashSet;
 
 //Tower of Hanoi
@@ -295,23 +297,55 @@ package Practice;
 // }
 
 //single or in pairs invite people to party
-public class Recursion_practice {
-    public static int call_guest(int n){
-        if (n <= 1) {
-            return 1;
-        }
+// public class Recursion_practice {
+//     public static int call_guest(int n){
+//         if (n <= 1) {
+//             return 1;
+//         }
         
-        //Single
-        int way1 = call_guest(n-1);
+//         //Single
+//         int way1 = call_guest(n-1);
 
-        //pairzs
-        int way2 = (n-1) * call_guest(n-2);
+//         //pairzs
+//         int way2 = (n-1) * call_guest(n-2);
 
-        return way1 + way2;
+//         return way1 + way2;
+//     }
+
+//     public static void main(String[] args) {
+//         int n = 4;
+//         System.out.println("Total way to invite guest :- " + call_guest(n));
+//     }
+// }
+
+
+//Print all subset of set of first natural number
+//Time Complexity: O(2^n)
+public class Recursion_practice {
+    public static void printsubset(ArrayList<Integer> subset){
+        for(int i = 0; i<subset.size(); i++){
+            System.out.print(subset.get(i)+ " ");
+        }
+        System.out.println();
     }
+    public static void subset_n(int n, ArrayList<Integer> subset){
+        if(n == 0){
+            printsubset(subset);
+            return;
+        }
 
+        //all
+        subset.add(n);
+        subset_n(n-1, subset);
+
+        //
+        subset.remove(subset.size()-1);
+        subset_n(n-1, subset);
+    }
+    
     public static void main(String[] args) {
-        int n = 4;
-        System.out.println("Total way to invite guest :- " + call_guest(n));
+        int n = 5;
+        ArrayList<Integer> subset = new ArrayList<>();
+        subset_n(n, subset);
     }
 }
