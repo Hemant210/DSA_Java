@@ -42,7 +42,6 @@ package Leetcode;
 //21. Merge Two Sorted List - Recursion
 public class mergesorted {
 
-    // Definition for singly-linked list.
     public static class ListNode {
         int val;
         ListNode next;
