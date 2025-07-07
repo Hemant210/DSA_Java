@@ -35,7 +35,7 @@ public class Sudoku_solver {
     // Backtracking helper
     public static boolean helper(char[][] board, int row, int col) {
         if (row == board.length) {
-            return true; // Solved
+            return true; 
         }
 
         int new_row = 0;
@@ -54,7 +54,7 @@ public class Sudoku_solver {
         } else {
             for (int i = 1; i <= 9; i++) {
                 if (isSafe(board, row, col, i)) {
-                    board[row][col] = (char) (i + '0'); // Fix: correct conversion
+                    board[row][col] = (char) (i + '0');
 
                     if (helper(board, new_row, new_col)) {
                         return true;

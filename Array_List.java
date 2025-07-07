@@ -31,6 +31,12 @@ public class Array_List {
         //Size
         int size = list.size();
         System.out.println(size);
+
+        //Loops
+        for(int i=0;i<list.size();i++){
+            System.out.print(list.get(i));
+        }
+        System.out.println();
         }    
         
 }
