@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Array_List {
     public static void main(String[] args) {
@@ -37,6 +39,11 @@ public class Array_List {
             System.out.print(list.get(i));
         }
         System.out.println();
+
+        //Sort
+        Collections.sort(list); 
+        System.out.println(list);
+
         }    
-        
+
 }
