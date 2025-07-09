@@ -22,7 +22,7 @@
 //             return 1;
 //         result = (n - 1) * n;
 //         return result;
-        
+
 //     }
 // }
 // public class Recursion {
@@ -132,11 +132,11 @@
 // Function to check sum 
 public class Recursion {
 
-    public static int Sum_number(int n){
-        if(n == 0)
+    public static int Sum_number(int n) {
+        if (n == 0)
             return 0;
-            return (n % 10 + Sum_number(n/10));
-        
+        return (n % 10 + Sum_number(n / 10));
+
     }
 
     public static void main(String[] args) {

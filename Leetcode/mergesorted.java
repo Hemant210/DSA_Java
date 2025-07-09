@@ -6,7 +6,7 @@ package Leetcode;
 //             int idx = m + n - 1;
 //             int i = m - 1;
 //             int j  = n - 1;
-    
+
 //             while(i >= 0 && j >= 0){
 //                 if(nums1[i] > nums2[j]){
 //                     nums1[idx--] = nums1[i--];
@@ -14,7 +14,7 @@ package Leetcode;
 //                     nums1[idx--] = nums2[j--];
 //                 }
 //             }
-            
+
 //             while(j >= 0){
 //                 nums1[idx--] = nums2[j--];
 //             }
@@ -27,9 +27,9 @@ package Leetcode;
 //             int[] nums2 = {2, 5, 6};
 //             int m = 3;
 //             int n = 3;
-    
+
 //             p.merge(nums1, m, nums2, n);
-    
+
 //             System.out.print("Merged array: ");
 //             for (int i = 0; i < nums1.length; i++) {
 //                 System.out.print(nums1[i] + " ");
@@ -37,7 +37,6 @@ package Leetcode;
 //             System.out.println();
 //         }
 //     }    
-    
 
 //21. Merge Two Sorted List - Recursion
 public class mergesorted {
@@ -46,7 +45,8 @@ public class mergesorted {
         int val;
         ListNode next;
 
-        ListNode() {}
+        ListNode() {
+        }
 
         ListNode(int val) {
             this.val = val;
@@ -60,8 +60,10 @@ public class mergesorted {
 
     static class Solution {
         public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-            if (list1 == null) return list2;
-            if (list2 == null) return list1;
+            if (list1 == null)
+                return list2;
+            if (list2 == null)
+                return list1;
 
             if (list1.val < list2.val) {
                 list1.next = mergeTwoLists(list1.next, list2);

@@ -1,4 +1,5 @@
 package Leetcode;
+
 //We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
 import java.util.*;
 // public class Bubble_practice {
@@ -50,10 +51,10 @@ public class Bubble_practice {
 
         return sb.toString();
     }
+
     public static void main(String[] args) {
-        int[] nums2 = {3, 30, 34, 5, 9};
+        int[] nums2 = { 3, 30, 34, 5, 9 };
 
         System.out.println("Output 2: " + largestNumber(nums2)); // Output: 9534330
     }
 }
-

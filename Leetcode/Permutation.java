@@ -1,4 +1,5 @@
 package Leetcode;
+
 // Java Program to find the next permutation of a number array
 public class Permutation {
 
@@ -43,7 +44,7 @@ public class Permutation {
     public static void main(String[] args) {
         Permutation p = new Permutation();
 
-        int[] nums = {1, 2, 3};
+        int[] nums = { 1, 2, 3 };
         p.nextPermutation(nums);
 
         System.out.print("\nNext permutation: ");

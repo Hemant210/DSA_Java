@@ -1,32 +1,23 @@
-# 🚀 Java DSA Journey
+**_🚀 Java DSA Journey_**
 
-Welcome to my **Data Structures and Algorithms (DSA)** learning repository, where I solve and document popular DSA problems using **Java**. This repo is structured to be beginner-friendly, interview-focused, and easy to follow.
+Welcome to my Data Structures and Algorithms (DSA) learning repository using Java!
+This repository contains well-structured, beginner-friendly, and interview-focused Java code for commonly asked DSA problems.
 
----
+**📌 Purpose**
 
-## 📌 Purpose
+This repository serves as:
 
-This repository is intended to be:
+📚 A personal learning log of my Java DSA practice.
 
-* 📚 **My personal learning log** — tracking my progress as I practice Java DSA problems.
-* 🧠 **A handy revision guide** — to revisit important concepts during interview preparation.
-* 👨‍💻 **A contribution to the open-source community** — helping others learn from clear and practical Java DSA solutions.
+🧠 A reference for revision and interview prep.
 
----
+👨‍💻 A contribution to the open-source learning community.
 
-## 🛠️ Tools & Technologies
+**🛠️ Tools & Tech**
 
-| **Tool**               | **Details**            |
-| ---------------------- | ---------------------- |
-| 💻 **Language**        | Java (JDK 17+)         |
-| 🧩 **Practice Sites**  | LeetCode, HackerRank   |
-| 🧰 **IDEs**            | VS Code, IntelliJ IDEA |
-| 🌐 **Version Control** | Git & GitHub           |
-
-## 📂 How to Use
-
-* Browse the folders for each topic.
-* Each folder contains well-commented Java files with clear problem statements and solutions.
-* Feel free to clone, fork, or download to practice.
-
-
+    | **Tool**               | **Details**            |
+    | ---------------------- | ---------------------- |
+    | 💻 **Language**        | Java (JDK 17+)         |
+    | 🧠 **Platform**        | LeetCode, HackerRank   |
+    | 🧰 **IDE**             | VS Code, IntelliJ IDEA |
+    | 🌐 **Version Control** | Git & GitHub           |

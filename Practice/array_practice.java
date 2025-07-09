@@ -36,31 +36,30 @@ package Practice;
 // }
 
 //Moore’s Voting Algorithm
-public class array_practice{
-        public int majorityElement(int[] nums) {
-            int freq = 0;
-            int ans = 0;
-    
-            for (int i = 0; i < nums.length; i++) {
-                if (freq == 0) {      // Use == for comparison
-                    ans = nums[i];
-                }
-    
-                if (ans == nums[i]) { // Use == for comparison
-                    freq++;
-                } else {
-                    freq--;
-                }
+public class array_practice {
+    public int majorityElement(int[] nums) {
+        int freq = 0;
+        int ans = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (freq == 0) { // Use == for comparison
+                ans = nums[i];
             }
-    
-            return ans; 
+
+            if (ans == nums[i]) { // Use == for comparison
+                freq++;
+            } else {
+                freq--;
+            }
         }
-        
+
+        return ans;
+    }
 
     public static void main(String[] args) {
         array_practice ap = new array_practice();
 
-        int[] nums = {3,2,3}; 
+        int[] nums = { 3, 2, 3 };
         int result = ap.majorityElement(nums);
 
         if (result != -1) {

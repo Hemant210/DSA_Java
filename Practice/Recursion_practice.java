@@ -289,7 +289,7 @@ import java.util.ArrayList;
 //             return reverse_print(str.substring(1)) + current_char;
 //         }
 //     }
-    
+
 //     public static void main(String[] args) {
 //         String str = "Geeksforgeeks";
 //         System.out.println(reverse_print(str));
@@ -302,7 +302,7 @@ import java.util.ArrayList;
 //         if (n <= 1) {
 //             return 1;
 //         }
-        
+
 //         //Single
 //         int way1 = call_guest(n-1);
 
@@ -317,7 +317,6 @@ import java.util.ArrayList;
 //         System.out.println("Total way to invite guest :- " + call_guest(n));
 //     }
 // }
-
 
 //Print all subset of set of first natural number
 //Time Complexity: O(2^n)
@@ -342,7 +341,7 @@ import java.util.ArrayList;
 //         subset.remove(subset.size()-1);
 //         subset_n(n-1, subset);
 //     }
-    
+
 //     public static void main(String[] args) {
 //         int n = 5;
 //         ArrayList<Integer> subset = new ArrayList<>();
@@ -352,28 +351,28 @@ import java.util.ArrayList;
 
 //Print all number of subset natural number
 public class Recursion_practice {
-    public static void printsub(ArrayList<Integer> subset){
-        for(int i = 0; i < subset.size(); i++){
+    public static void printsub(ArrayList<Integer> subset) {
+        for (int i = 0; i < subset.size(); i++) {
             System.out.print(subset.get(i) + " ");
         }
         System.out.println();
 
     }
 
-    public static int subset_n(int n,ArrayList<Integer> subset){
-        if(n == 0) {
+    public static int subset_n(int n, ArrayList<Integer> subset) {
+        if (n == 0) {
             // printsubset(subset); // Optional
             return 1; // One valid subset
         }
-    
+
         // Include current number
         subset.add(n);
-        int count1 = subset_n(n-1, subset);
-    
+        int count1 = subset_n(n - 1, subset);
+
         // Exclude current number
         subset.remove(subset.size() - 1);
-        int count2 = subset_n(n-1, subset);
-    
+        int count2 = subset_n(n - 1, subset);
+
         return count1 + count2;
     }
 
