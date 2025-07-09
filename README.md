@@ -13,10 +13,16 @@ This repository serves as:
 
 👨‍💻 A contribution to the open-source learning community.
 
+<<<<<<< HEAD
 **🛠️ Tools & Tech**
 
     | Tool                   | Details                |
     | ---------------------- | ---------------------- |
+=======
+ **🛠️ Tools & Tech**
+    | **Tool                  | Details**              |
+    | ----------------------  | ---------------------- |
+>>>>>>> 47ed7936b93bde395bea5dbec4d655f415c53be3
     | 💻 **Language**        | Java (JDK 17+)         |
     | 🧠 **Platform**        | LeetCode, HackerRank   |
     | 🧰 **IDE**             | VS Code, IntelliJ IDEA |
