@@ -13,7 +13,7 @@ This repository serves as:
 
 👨‍💻 A contribution to the open-source learning community.
 
-    **🛠️ Tools & Tech**
+**🛠️ Tools & Tech**
 
     | Tool                   | Details                |
     | ---------------------- | ---------------------- |
