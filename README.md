@@ -1,23 +1,39 @@
-**_🚀 Java DSA Journey_**
+# 🚀 Java DSA Journey #
 
-Welcome to my Data Structures and Algorithms (DSA) learning repository using Java!
-This repository contains well-structured, beginner-friendly, and interview-focused Java code for commonly asked DSA problems.
+Welcome to my **Data Structures and Algorithms (DSA)** learning repository, where I solve and document popular DSA problems using **Java**. This repo is structured to be beginner-friendly, interview-focused, and easy to follow.
 
-**📌 Purpose**
+---
 
-This repository serves as:
+## 📌 Purpose
 
-📚 A personal learning log of my Java DSA practice.
+This repository is intended to be:
 
-🧠 A reference for revision and interview prep.
+* 📚 **My personal learning log** — tracking my progress as I practice Java DSA problems.
+* 🧠 **A handy revision guide** — to revisit important concepts during interview preparation.
+* 👨‍💻 **A contribution to the open-source community** — helping others learn from clear and practical Java DSA solutions.
 
-👨‍💻 A contribution to the open-source learning community.
+---
 
-**🛠️ Tools & Tech**
+## 🛠️ Tools & Technologies
 
-    | **Tool**               | **Details**            |
-    | ---------------------- | ---------------------- |
-    | 💻 **Language**        | Java (JDK 17+)         |
-    | 🧠 **Platform**        | LeetCode, HackerRank   |
-    | 🧰 **IDE**             | VS Code, IntelliJ IDEA |
-    | 🌐 **Version Control** | Git & GitHub           |
+| **Tool**               | **Details**            |
+| ---------------------- | ---------------------- |
+| 💻 **Language**        | Java (JDK 17+)         |
+| 🧩 **Practice Sites**  | LeetCode, HackerRank   |
+| 🧰 **IDEs**            | VS Code, IntelliJ IDEA |
+| 🌐 **Version Control** | Git & GitHub           |
+
+---
+
+## 📂 How to Use
+
+* Browse the folders for each topic.
+* Each folder contains well-commented Java files with clear problem statements and solutions.
+* Feel free to clone, fork, or download to practice.
+
+---
+
+## 🤝 Contributing
+
+This is primarily my learning space, but **PRs for improvements, optimizations, or better explanations are always welcome**!
+Let’s make DSA easier for everyone.
