@@ -4,18 +4,18 @@ public class Link_list {
     class Node {
         String data;
         Node next;
-        
-        Node(String data){
+
+        Node(String data) {
             this.data = data;
             this.next = null;
         }
     }
 
-    //Add - First
-    public void add_first(String data){
+    // Add - First
+    public void add_first(String data) {
         Node newNode = new Node(data);
-        if(head == null){
-            head =newNode;
+        if (head == null) {
+            head = newNode;
             return;
         }
 
@@ -23,11 +23,11 @@ public class Link_list {
         head = newNode;
     }
 
-    //Add - Last
-    public void add_last(String data){
+    // Add - Last
+    public void add_last(String data) {
         Node newNode = new Node(data);
-        if(head == null){
-            head =newNode;
+        if (head == null) {
+            head = newNode;
             return;
         }
 
@@ -39,8 +39,8 @@ public class Link_list {
         currNode.next = newNode;
     }
 
-    //Print data 
-    public void printList(){
+    // Print data
+    public void printList() {
         if (head == null) {
             System.out.println("List is empty");
             return;
@@ -53,6 +53,7 @@ public class Link_list {
 
         System.out.println("null");
     }
+
     public static void main(String[] args) {
         Link_list list = new Link_list();
         list.add_first("a");
