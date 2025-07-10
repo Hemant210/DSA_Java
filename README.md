@@ -15,6 +15,7 @@ This repository is intended to be:
 ---
 
 ## 🛠️ Tools & Technologies
+<<<<<<< HEAD
 
 | **Tool**               | **Details**            |
 | ---------------------- | ---------------------- |
@@ -40,3 +41,27 @@ Let’s make DSA easier for everyone.
 
 ---
 
+=======
+
+| **Tool**               | **Details**            |
+| ---------------------- | ---------------------- |
+| 💻 **Language**        | Java (JDK 17+)         |
+| 🧩 **Practice Sites**  | LeetCode, HackerRank   |
+| 🧰 **IDEs**            | VS Code, IntelliJ IDEA |
+| 🌐 **Version Control** | Git & GitHub           |
+
+---
+
+## 📂 How to Use
+
+* Browse the folders for each topic.
+* Each folder contains well-commented Java files with clear problem statements and solutions.
+* Feel free to clone, fork, or download to practice.
+
+---
+
+## 🤝 Contributing
+
+This is primarily my learning space, but **PRs for improvements, optimizations, or better explanations are always welcome**!
+Let’s make DSA easier for everyone.
+>>>>>>> 2975c3047ef22d070c6b147331f6317c428224e7
