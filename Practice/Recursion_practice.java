@@ -1,9 +1,9 @@
 package Practice;
 
-import java.util.ArrayList;
-// import java.util.*;
-// import java.util.HashSet;
-import java.util.Scanner;
+// import java.util.ArrayList;
+// // import java.util.*;
+// // import java.util.HashSet;
+// import java.util.Scanner;
 
 //Tower of Hanoi
 //Time complexity
@@ -406,8 +406,7 @@ public class Recursion_practice {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
+        String s = "thw$ g##bjhdwd vdg*gh$vvdd#bdudhc";
         System.out.println(makeGoodString(s));
     }
 }
