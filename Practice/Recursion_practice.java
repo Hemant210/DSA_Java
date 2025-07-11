@@ -3,6 +3,7 @@ package Practice;
 import java.util.ArrayList;
 // import java.util.*;
 // import java.util.HashSet;
+import java.util.Scanner;
 
 //Tower of Hanoi
 //Time complexity
@@ -350,36 +351,63 @@ import java.util.ArrayList;
 // }
 
 //Print all number of subset natural number
+// public class Recursion_practice {
+//     public static void printsub(ArrayList<Integer> subset) {
+//         for (int i = 0; i < subset.size(); i++) {
+//             System.out.print(subset.get(i) + " ");
+//         }
+//         System.out.println();
+
+//     }
+
+//     public static int subset_n(int n, ArrayList<Integer> subset) {
+//         if (n == 0) {
+//             // printsubset(subset); // Optional
+//             return 1; // One valid subset
+//         }
+
+//         // Include current number
+//         subset.add(n);
+//         int count1 = subset_n(n - 1, subset);
+
+//         // Exclude current number
+//         subset.remove(subset.size() - 1);
+//         int count2 = subset_n(n - 1, subset);
+
+//         return count1 + count2;
+//     }
+
+//     public static void main(String[] args) {
+//         int n = 5;
+//         ArrayList<Integer> subset = new ArrayList<>();
+//         int total_sub = subset_n(n, subset);
+//         System.out.println("Total number of Subset :- " + total_sub);
+//     }
+// }
+
+//You are given a string S consisting of a list of words; the string contains lowercase alphabets and some special symbols such as (*, $, #). Now, our task is to make the string good, and this is done by removing all the special characters from the sentence. For this, we have to perform two operations-
 public class Recursion_practice {
-    public static void printsub(ArrayList<Integer> subset) {
-        for (int i = 0; i < subset.size(); i++) {
-            System.out.print(subset.get(i) + " ");
-        }
-        System.out.println();
-
-    }
-
-    public static int subset_n(int n, ArrayList<Integer> subset) {
-        if (n == 0) {
-            // printsubset(subset); // Optional
-            return 1; // One valid subset
+    public static String makeGoodString(String s) {
+        if (s.isEmpty()) {
+            return "";
         }
 
-        // Include current number
-        subset.add(n);
-        int count1 = subset_n(n - 1, subset);
+        char c = s.charAt(0);
 
-        // Exclude current number
-        subset.remove(subset.size() - 1);
-        int count2 = subset_n(n - 1, subset);
-
-        return count1 + count2;
+        if (c == '*' || c == '$' || c == '#') {
+            if (s.length() > 1 && Character.isLowerCase(s.charAt(1))) {
+                return makeGoodString(s.substring(2));
+            } else {
+                return makeGoodString(s.substring(1));
+            }
+        } else {
+            return c + makeGoodString(s.substring(1));
+        }
     }
 
     public static void main(String[] args) {
-        int n = 5;
-        ArrayList<Integer> subset = new ArrayList<>();
-        int total_sub = subset_n(n, subset);
-        System.out.println("Total number of Subset :- " + total_sub);
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        System.out.println(makeGoodString(s));
     }
 }
