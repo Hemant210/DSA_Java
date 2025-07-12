@@ -55,6 +55,17 @@ public class Linklist_practice {
         head = prevNode;
     }
 
+    public Node reverseRecursive(Node head){
+        if(head == null || head.next == null){
+            return head;
+        }
+        Node newHead = reverseRecursive(head.next);
+        head.next.next = head;
+        head.next = null;
+
+        return newHead;
+    }
+
     public void printList() {
         Node currNode = head;
         while (currNode != null) {
@@ -66,16 +77,17 @@ public class Linklist_practice {
 
     public static void main(String[] args) {
         Linklist_practice list = new Linklist_practice();
-        list.add_last("0");
-        list.add_last("2");
-        list.add_last("4");
-        list.add_last("5");
+        // list.add_last("0");
+        // list.add_last("2");
+        // list.add_last("4");
+        // list.add_last("5");
         
 
         System.out.println("Original list:");
         list.printList();
 
-        list.reversseIterate();
+        // list.reversseIterate();s
+        list.head = list.reverseRecursive(list.head);
         System.out.println("Reversed list:");
         list.printList();
     }
