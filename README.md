@@ -15,7 +15,6 @@ This repository is intended to be:
 ---
 
 ## 🛠️ Tools & Technologies
-<<<<<<< HEAD
 
 | **Tool**               | **Details**            |
 | ---------------------- | ---------------------- |
