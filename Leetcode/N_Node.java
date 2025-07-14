@@ -64,5 +64,5 @@ public class N_Node {
         System.out.print("Updates List : ");
         printList(head);
     }
-
+    
 }
