@@ -92,63 +92,148 @@ package Practice;
 //     }
 // }
 
+// class Node {
+//     int data;
+//     Node next;
+
+//     Node(int new_data) {
+//         data = new_data;
+//         next = null;
+//     }
+// }
+
+
+// public class Linklist_practice {
+
+//     // public static Node reverseList(Node head) {
+//     //     Node curr = head, prev = null, next;
+
+//     //     while (curr != null) {
+//     //         next = curr.next;
+//     //         curr.next = prev;
+//     //         prev = curr;
+//     //         curr = next;
+//     //     }
+//     //     return prev;
+//     // }
+
+//     public static Node reverList(Node head){
+//         if (head == null || head.next == null) {
+//             return head;
+//         }
+
+//         Node rest = reverList(head.next);
+//         head.next.next = head;
+//         head.next = null;
+
+//         return rest;
+//     }
+
+//     public static void printList(Node node) {
+//         while (node != null) {
+//             System.out.println(node.data);
+//             node = node.next;
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         Node head = new Node(1);
+//         head.next = new Node(2);
+//         head.next.next = new Node(3);
+//         head.next.next.next = new Node(4);
+//         head.next.next.next.next = new Node(5);
+
+//         System.out.print("Given Linked list:");
+//         printList(head);
+        
+//         head = reverList(head);
+
+//         System.out.print("\nReversed Linked List:");
+//         printList(head);
+//     }
+// }
+
+// Java program to delete a linked list node at a given
+// position
+
+// Node class to define a linked list node
 class Node {
     int data;
     Node next;
 
-    Node(int new_data) {
-        data = new_data;
-        next = null;
+    Node(int data)
+    {
+        this.data = data;
+        this.next = null;
     }
 }
 
-
 public class Linklist_practice {
+    // Function to delete a node at a given position
+    public static Node deleteNode(Node head, int position)
+    {
+        Node temp = head;
+        Node prev = null;
 
-    // public static Node reverseList(Node head) {
-    //     Node curr = head, prev = null, next;
+        // Base case if linked list is empty
+        if (temp == null)
+            return head;
 
-    //     while (curr != null) {
-    //         next = curr.next;
-    //         curr.next = prev;
-    //         prev = curr;
-    //         curr = next;
-    //     }
-    //     return prev;
-    // }
-
-    public static Node reverList(Node head){
-        if (head == null || head.next == null) {
+        // Case 1: Head is to be deleted
+        if (position == 1) {
+            head = temp.next;
             return head;
         }
 
-        Node rest = reverList(head.next);
-        head.next.next = head;
-        head.next = null;
-
-        return rest;
-    }
-
-    public static void printList(Node node) {
-        while (node != null) {
-            System.out.println(node.data);
-            node = node.next;
+        // Case 2: Node to be deleted is in middle
+        // Traverse till given position
+        for (int i = 1; temp != null && i < position; i++) {
+            prev = temp;
+            temp = temp.next;
         }
+
+        // If given position is found, delete node
+        if (temp != null) {
+            prev.next = temp.next;
+        }
+        else {
+            System.out.println("Data not present");
+        }
+
+         return head;
     }
 
-    public static void main(String[] args) {
+    // Function to print the linked list
+    public static void printList(Node head)
+    {
+        while (head != null) {
+            System.out.print(head.data + " -> ");
+            head = head.next;
+        }
+        System.out.println("null");
+    }
+
+    // Driver code
+    public static void main(String[] args)
+    {
+        // Creating a static linked list
+        // 1 -> 2 -> 3 -> 4 -> 5 -> null
         Node head = new Node(1);
         head.next = new Node(2);
         head.next.next = new Node(3);
         head.next.next.next = new Node(4);
         head.next.next.next.next = new Node(5);
 
-        System.out.print("Given Linked list:");
+        // Print original list
+        System.out.print("Original list: ");
         printList(head);
-        
-        head = reverList(head);
 
-        System.out.print("\nReversed Linked List:");
+        // Deleting node at position 2
+        int position = 2;
+        head = deleteNode(head, position);
+
+        // Print list after deletion
+        System.out.print("List after deletion: ");
         printList(head);
     }
 }
