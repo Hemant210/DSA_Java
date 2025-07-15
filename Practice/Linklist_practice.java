@@ -282,8 +282,6 @@ public class Linklist_practice {
 
     // Driver code
     public static void main(String[] args) {
-      
-        // Create a hard-coded linked list: 
         // 2 -> 3 -> 4 -> 5 -> 6
         Node head = new Node(2);
         head.next = new Node(3);
@@ -294,7 +292,6 @@ public class Linklist_practice {
         System.out.print("Created Linked list is:");
         printList(head);
 
-        // Example of appending a node at the end
         head = append(head, 1);
 
         System.out.print("\nAfter inserting 1 at the end:");
