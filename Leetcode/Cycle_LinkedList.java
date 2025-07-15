@@ -11,9 +11,8 @@ public class Cycle_LinkedList {
             next = null;
         }
     }
-    
 
-    public static boolean isCycle(ListNode head){
+    public static boolean isCycle(ListNode head) {
         if (head == null) {
             return false;
         }
