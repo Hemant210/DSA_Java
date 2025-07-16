@@ -241,15 +241,15 @@ class Node {
     }
 }
 
-public class Linklist_practice {   
+public class Linklist_practice {
     // Given the head of a list and an int, appends
     // a new node at the end and returns the head.
     public static Node append(Node head, int newData) {
-      
+
         // Create a new node
         Node newNode = new Node(newData);
 
-        // If the Linked List is empty, make the new 
+        // If the Linked List is empty, make the new
         // node as the head and return
         if (head == null) {
             return newNode;
@@ -263,7 +263,7 @@ public class Linklist_practice {
             last = last.next;
         }
 
-        // Change the next pointer of the 
+        // Change the next pointer of the
         // last node to point to the new node
         last.next = newNode;
 
@@ -271,7 +271,7 @@ public class Linklist_practice {
         return head;
     }
 
-    // This function prints the contents of 
+    // This function prints the contents of
     // the linked list starting from the head
     public static void printList(Node node) {
         while (node != null) {
