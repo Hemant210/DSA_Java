@@ -67,6 +67,7 @@ package Leetcode;
 
 // }
 
+// Function to find Nth node from the end of linked list
 public class N_Node {
     // Link list node
     static class Node {
@@ -80,7 +81,6 @@ public class N_Node {
         }
     }
 
-    // Function to find Nth node from the end of linked list
     public static int nthFromEnd(Node head, int N) {
 
         // Create two pointers main_ptr and ref_ptr
