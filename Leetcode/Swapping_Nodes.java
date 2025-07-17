@@ -1,5 +1,6 @@
 package Leetcode;
 
+//1721. Swapping Nodes in a Linked List
 public class Swapping_Nodes {
 
     static class ListNode {
@@ -12,7 +13,6 @@ public class Swapping_Nodes {
     }
 
     public static ListNode swapNodes(ListNode head, int k) {
-        ListNode first = head;
         ListNode second = head;
         ListNode front = head;
 
