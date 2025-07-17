@@ -1,5 +1,6 @@
 package Leetcode;
 
+//swap every two adjacent nodes and return its head. 
 public class swap_Nodes {
 
     static class ListNode {
@@ -13,9 +14,10 @@ public class swap_Nodes {
 
     // Function to swap every two adjacent nodes
     public static ListNode swapPairs(ListNode head) {
-        if (head == null || head.next == null) return head;
+        if (head == null || head.next == null)
+            return head;
 
-        ListNode dummy = new ListNode(0);  // Dummy node to simplify head operations
+        ListNode dummy = new ListNode(0); // Dummy node to simplify head operations
         dummy.next = head;
 
         ListNode prev = dummy;

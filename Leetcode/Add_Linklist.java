@@ -27,8 +27,10 @@ public class Add_Linklist {
             current.next = new ListNode(sum % 10);
             current = current.next;
 
-            if (p != null) p = p.next;
-            if (q != null) q = q.next;
+            if (p != null)
+                p = p.next;
+            if (q != null)
+                q = q.next;
         }
 
         if (carry > 0) {
@@ -63,6 +65,6 @@ public class Add_Linklist {
         ListNode result = addTwoNumbers(l1, l2);
 
         System.out.print("Result: ");
-        printList(result); // Should output: 7 -> 0 -> 8
+        printList(result);
     }
 }
