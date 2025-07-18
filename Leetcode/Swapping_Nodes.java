@@ -21,8 +21,8 @@ public class Swapping_Nodes {
             front = front.next;
         }
 
-        // Store reference to kth node from start
-        ListNode kthFromStart = front;
+         // Store reference to kth node from start
+          ListNode kthFromStart = front;
 
         // Move front to the end, move second from beginning
         while (front.next != null) {
