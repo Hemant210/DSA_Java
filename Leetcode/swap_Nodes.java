@@ -39,7 +39,7 @@ public class swap_Nodes {
         return dummy.next;
     }
 
-    // Utility to print the linked list
+    // Utility to print the linked list    
     public static void printList(ListNode head) {
         while (head != null) {
             System.out.print(head.val + " ");
