@@ -36,21 +36,29 @@ public class Stack_practice {
         s.push(top);
     }
 
+    public static void reverse(Stack<Integer> s){
+        if (s.isEmpty()) {
+            return;
+        }
+        int top = s.pop();
+        reverse(s);
+        print_number(top, s);
+    }
+
     public static void main(String[] args) {
         Stack<Integer> s = new Stack<>();
-
-        // pushing initial values into stack
         s.push(1);
         s.push(2);
         s.push(3);
 
         // inserting 4 at bottom of stack using recursion
-        print_number(4, s);
+        // print_number(4, s);
 
-        // printing and emptying the stack
+        reverse(s);
+        
         while (!s.isEmpty()) {
-            System.out.println(s.peek()); // print top element
-            s.pop(); // remove top element
+            System.out.println(s.peek()); 
+            s.pop(); 
         }
     }
 }
