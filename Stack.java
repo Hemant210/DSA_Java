@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 public class Stack {
     // // Linked List Implementation of Stack
@@ -53,52 +53,52 @@ public class Stack {
     // }
 
     // ArrayList Implementation of Stack
-    static class Stack_class {
-        // Using ArrayList to store elements
-        static ArrayList<Integer> list = new ArrayList<>();
+    // static class Stack_class {
+    //     // Using ArrayList to store elements
+    //     static ArrayList<Integer> list = new ArrayList<>();
 
-        public static boolean isEmpty() {
-            return list.size() == 0;
-        }
+    //     public static boolean isEmpty() {
+    //         return list.size() == 0;
+    //     }
 
-        // Push: add element to end of list (top of stack)
-        public static void push(int data) {
-            list.add(data);
-        }
+    //     // Push: add element to end of list (top of stack)
+    //     public static void push(int data) {
+    //         list.add(data);
+    //     }
 
-        // Pop: remove and return top element
-        public static int pop() {
-            if (isEmpty()) {
-                return -1; // if stack is empty
-            }
-            // get and remove last element
-            int top = list.get(list.size() - 1);
-            list.remove(list.size() - 1);
-            return top;
-        }
+    //     // Pop: remove and return top element
+    //     public static int pop() {
+    //         if (isEmpty()) {
+    //             return -1; // if stack is empty
+    //         }
+    //         // get and remove last element
+    //         int top = list.get(list.size() - 1);
+    //         list.remove(list.size() - 1);
+    //         return top;
+    //     }
 
-        // Peek: return top element without removing
-        public static int peek() {
-            if (isEmpty()) {
-                return -1;
-            }
-            return list.get(list.size() - 1);
-        }
-    }
+    //     // Peek: return top element without removing
+    //     public static int peek() {
+    //         if (isEmpty()) {
+    //             return -1;
+    //         }
+    //         return list.get(list.size() - 1);
+    //     }
+    // }
 
-    public static void main(String[] args) {
-        Stack_class s = new Stack_class(); // create stack object
+    // public static void main(String[] args) {
+    //     Stack_class s = new Stack_class(); // create stack object
 
-        // Pushing elements onto the stack
-        s.push(1);
-        s.push(2);
-        s.push(3);
-        s.push(4);
+    //     // Pushing elements onto the stack
+    //     s.push(1);
+    //     s.push(2);
+    //     s.push(3);
+    //     s.push(4);
 
-        // Print and pop each element until stack is empty
-        while (!s.isEmpty()) {
-            System.out.println(s.peek()); // show top element
-            s.pop(); // remove top element
-        }
-    }
+    //     // Print and pop each element until stack is empty
+    //     while (!s.isEmpty()) {
+    //         System.out.println(s.peek()); // show top element
+    //         s.pop(); // remove top element
+    //     }
+    // }
 }

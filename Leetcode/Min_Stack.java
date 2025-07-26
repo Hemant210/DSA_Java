@@ -2,6 +2,7 @@ package Leetcode;
 
 import java.util.Stack;
 
+//Add 155. Min Stack Leetcode
 public class Min_Stack {
     Stack<Integer> stack;
     Stack<Integer> minStack;
@@ -34,7 +35,6 @@ public class Min_Stack {
         return minStack.peek();
     }
 
-    // main() should create an object of Min_Stack to avoid null error
     public static void main(String[] args) {
         Min_Stack minStack = new Min_Stack(); // constructor call
 
@@ -43,11 +43,11 @@ public class Min_Stack {
         minStack.push(7);
         minStack.push(2);
 
-        System.out.println("Top: " + minStack.top());       // 2
-        System.out.println("Min: " + minStack.getMin());    // 2
+        System.out.println("Top: " + minStack.top()); // 2
+        System.out.println("Min: " + minStack.getMin()); // 2
 
         minStack.pop();
-        System.out.println("Top after pop: " + minStack.top());       // 7
-        System.out.println("Min after pop: " + minStack.getMin());    // 3
+        System.out.println("Top after pop: " + minStack.top()); // 7
+        System.out.println("Min after pop: " + minStack.getMin()); // 3
     }
 }
