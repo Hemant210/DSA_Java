@@ -3,7 +3,6 @@ package Leetcode;
 // 37. Sudoku Solver
 public class Sudoku_solver {
 
-    // Checks if placing `number` at (row, col) is valid
     public static boolean isSafe(char[][] board, int row, int col, int number) {
         char numChar = (char) (number + '0'); // Correct char conversion
 
