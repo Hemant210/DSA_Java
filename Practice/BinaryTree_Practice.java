@@ -54,8 +54,8 @@ public class BinaryTree_Practice {
         return sumleftNode + sumrightNode + root.data;
     }
 
-    //Calculate height of Tree
-    public static int height(Node root){
+    // Calculate height of Tree
+    public static int height(Node root) {
         if (root == null) {
             return 0;
         }
@@ -66,8 +66,9 @@ public class BinaryTree_Practice {
         return Math.max(leftheight, rightheight + 1);
     }
 
-    //Calculate diameter of Tree
-    public static int diameter(Node root){
+    // Calculate diameter of Tree
+    // Time complexity = O(n²) ✅ Brute Force approch
+    public static int diameter(Node root) {
         if (root == null) {
             return 0;
         }
@@ -78,13 +79,46 @@ public class BinaryTree_Practice {
 
         return Math.max(dia3, Math.max(dia1, dia2));
     }
+
+    static class TreeInfo {
+        int ht;
+        int diam;
+
+        TreeInfo(int ht, int diam) {
+            this.ht = ht;
+            this.diam = diam;
+        }
+    }
+
+    // Calculate diameter of Tree
+    // Time complexity = O(n) ✅
+    public static TreeInfo diameter2(Node root) {
+        if (root == null) {
+            new TreeInfo(0, 0);
+        }
+        TreeInfo left = diameter2(root.left);
+        TreeInfo right = diameter2(root.right);
+
+        int myheight = Math.max(left.ht, right.ht) + 1;
+
+        int diam1 = left.diam;
+        int diam2 = right.diam;
+        int diam3 = left.ht + right.ht + 1;
+
+        int mydiam = Math.max(Math.max(diam1, diam2), diam3);
+
+        TreeInfo myiInfo = new TreeInfo(myheight, mydiam);
+        return myiInfo;
+    }
+
     public static void main(String[] args) {
         int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
         Binarytrees tree = new Binarytrees();
-        Node root = tree.buildtree(nodes);  
+        Node root = tree.buildtree(nodes);
         System.out.println("Number of Nodes :- " + countofNodes(root));
         System.out.println("Sum of Nodes :- " + sumofNodes(root));
         System.out.println("Height of Tree :- " + height(root));
-        System.out.println("Diameter of Tree :- " + diameter(root));
+        // System.out.println("Diameter of Tree :- " + diameter(root));
+        System.out.println("Diameter of Tree :- " + diameter2(root));
     }
 }
