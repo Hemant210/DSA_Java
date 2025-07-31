@@ -42,10 +42,24 @@ public class BinaryTree_Practice {
         return leftNode + rightNode + 1;
     }
 
+    //Sum of Nodes
+
+    public static int sumofNodes(Node root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int sumleftNode = sumofNodes(root.left);
+        int sumrightNode = sumofNodes(root.right);
+
+        return sumleftNode + sumrightNode + root.data;
+    }
+
     public static void main(String[] args) {
         int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
         Binarytrees tree = new Binarytrees();
         Node root = tree.buildtree(nodes);
         System.out.println("Number of Nodes :- " + countofNodes(root));
+        System.out.println("Sum of Nodes :- " + sumofNodes(root));
     }
 }
