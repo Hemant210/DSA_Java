@@ -111,6 +111,7 @@ public class BinaryTree_Practice {
         return myiInfo;
     }
 
+    //Subtree of another tree
     public static void main(String[] args) {
         int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
         Binarytrees tree = new Binarytrees();
@@ -118,7 +119,7 @@ public class BinaryTree_Practice {
         System.out.println("Number of Nodes :- " + countofNodes(root));
         System.out.println("Sum of Nodes :- " + sumofNodes(root));
         System.out.println("Height of Tree :- " + height(root));
-        // System.out.println("Diameter of Tree :- " + diameter(root));
+        System.out.println("Diameter of Tree :- " + diameter(root));
         System.out.println("Diameter of Tree :- " + diameter2(root).diam);
     }
 }
