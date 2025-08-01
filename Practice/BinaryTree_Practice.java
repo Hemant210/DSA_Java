@@ -94,7 +94,7 @@ public class BinaryTree_Practice {
     // Time complexity = O(n) ✅
     public static TreeInfo diameter2(Node root) {
         if (root == null) {
-            new TreeInfo(0, 0);
+            return new TreeInfo(0, 0);
         }
         TreeInfo left = diameter2(root.left);
         TreeInfo right = diameter2(root.right);
@@ -119,6 +119,6 @@ public class BinaryTree_Practice {
         System.out.println("Sum of Nodes :- " + sumofNodes(root));
         System.out.println("Height of Tree :- " + height(root));
         // System.out.println("Diameter of Tree :- " + diameter(root));
-        System.out.println("Diameter of Tree :- " + diameter2(root));
+        System.out.println("Diameter of Tree :- " + diameter2(root).diam);
     }
 }
