@@ -3,6 +3,8 @@ package Leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
+//94. Binary Tree Inorder Traversal
+//144. Binary Tree Preorder Traversal
 public class BinaryTree_InorderTraversal {
     static class TreeNode {
         int val;
@@ -34,8 +36,14 @@ public class BinaryTree_InorderTraversal {
             return;
         }
 
+        //Inorder Traversal
         helper(res, root.left);
         res.add(root.val);
+        helper(res, root.right);
+
+        //Preorder Traversal
+        res.add(root.val);
+        helper(res, root.left);
         helper(res, root.right);
     }
 
