@@ -1,5 +1,7 @@
 package Leetcode;
 
+import java.util.*;
+
 public class Convert_BST {
 
     // Definition for a binary tree node.
@@ -39,25 +41,45 @@ public class Convert_BST {
             return root;
         }
 
-        // Helper function: Inorder Traversal (prints BST in ascending order)
-        public void inorderTraversal(TreeNode root) {
-            if (root != null) {
-                inorderTraversal(root.left);
-                System.out.print(root.val + " ");
-                inorderTraversal(root.right);
+        // Level-order traversal that prints tree like LeetCode
+        public List<String> levelOrder(TreeNode root) {
+            List<String> result = new ArrayList<>();
+            if (root == null) return result;
+
+            Queue<TreeNode> queue = new LinkedList<>();
+            queue.add(root);
+
+            while (!queue.isEmpty()) {
+                TreeNode curr = queue.poll();
+                if (curr != null) {
+                    result.add(String.valueOf(curr.val));
+                    queue.add(curr.left);
+                    queue.add(curr.right);
+                } else {
+                    result.add("null");
+                }
             }
+
+            // Remove trailing nulls
+            int i = result.size() - 1;
+            while (i >= 0 && result.get(i).equals("null")) {
+                result.remove(i);
+                i--;
+            }
+
+            return result;
         }
     }
 
-    // Main method to run in VS Code
+    // Main method
     public static void main(String[] args) {
-        int[] nums = {-10, -3, 0, 5, 9};
+        //int[] nums = {-10, -3, 0, 5, 9};
+        int[] nums = {1,3};
 
         Solution sol = new Solution();
         TreeNode bstRoot = sol.sortedArrayToBST(nums);
 
-        System.out.print("Inorder Traversal of BST: ");
-        sol.inorderTraversal(bstRoot);  // Should print: -10 -3 0 5 9
+        List<String> output = sol.levelOrder(bstRoot);
+        System.out.println("Output: " + output);
     }
 }
-
