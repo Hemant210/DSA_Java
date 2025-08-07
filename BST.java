@@ -31,6 +31,7 @@ public class BST {
         return root;
     }
 
+    //Search function to found a value into the BST
     public static Boolean search(Node root, int key) {
         if (root == null) {
             return false;
@@ -68,7 +69,7 @@ public class BST {
         System.out.println();
         search(root, 5);
 
-        if (search(root, 5)) {
+        if (search(root, 7)) {
             System.out.println("Found");
         } else {
             System.out.println("Not found");
