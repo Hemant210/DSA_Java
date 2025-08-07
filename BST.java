@@ -31,7 +31,7 @@ public class BST {
         return root;
     }
 
-    //Search function to found a value into the BST
+    // Search function to found a value into the BST
     public static Boolean search(Node root, int key) {
         if (root == null) {
             return false;
@@ -45,6 +45,41 @@ public class BST {
         }
     }
 
+    // Delete function to delete a value into the BST
+    public static Node delete(Node root, int val){
+        if (root.data > val) {
+            root.left = delete(root.left, val);
+        } else if (root.data < val) {
+            root.right = delete(root.right, val);
+        } else {
+            //Case :- 1
+            if (root.left == null && root.right == null) {
+                return null;
+            }
+
+            //Case :- 2
+            if (root.left == null) {
+                return root.right;
+            } else if (root.right == null) {
+                return root.left;
+            }
+
+            //Case :- 3
+            Node IS = inorderSuccesor(root.right);
+            root.data = IS.data;
+            root.right = delete(root.right, IS.data);
+        }
+
+        return root;
+    }
+
+    public static Node inorderSuccesor(Node root){
+        while (root.left != null) {
+            root = root.left;
+        }
+
+        return root;
+    }
     // Inorder traversal of BST (Left - Root - Right)
     public static void inorder(Node root) {
         if (root == null) {
@@ -67,12 +102,14 @@ public class BST {
         System.out.println("Inorder Traversal of BST:");
         inorder(root);
         System.out.println();
-        search(root, 5);
 
-        if (search(root, 7)) {
+        if (search(root, 5)) {
             System.out.println("Found");
         } else {
             System.out.println("Not found");
         }
+
+        delete(root, 5);
+        inorder(root);
     }
 }
