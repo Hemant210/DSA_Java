@@ -2,6 +2,7 @@ package Leetcode;
 
 import java.util.*;
 
+//109. Convert Sorted List to Binary Search Tree
 public class ConvertSorted_BST {
 
     // Definition for singly-linked list
@@ -9,7 +10,8 @@ public class ConvertSorted_BST {
         int val;
         ListNode next;
 
-        ListNode() {}
+        ListNode() {
+        }
 
         ListNode(int val) {
             this.val = val;
@@ -26,7 +28,8 @@ public class ConvertSorted_BST {
         int val;
         TreeNode left, right;
 
-        TreeNode() {}
+        TreeNode() {
+        }
 
         TreeNode(int val) {
             this.val = val;
@@ -52,7 +55,8 @@ public class ConvertSorted_BST {
 
         // Force the mid to favor left middle when even length to match expected shape
         private TreeNode buildBST(List<Integer> nums, int left, int right) {
-            if (left > right) return null;
+            if (left > right)
+                return null;
 
             // Choose left middle when even length to force tree shape
             int mid = (left + right) / 2;
@@ -88,7 +92,8 @@ public class ConvertSorted_BST {
 
         // Remove trailing nulls
         int i = result.size() - 1;
-        while (i >= 0 && result.get(i).equals("null")) i--;
+        while (i >= 0 && result.get(i).equals("null"))
+            i--;
         result = result.subList(0, i + 1);
 
         System.out.println(result);
@@ -113,10 +118,8 @@ public class ConvertSorted_BST {
     }
 }
 
-
 //        0
 //       / \
 //     -3   9
 //     /    /
 //  -10    5
-
