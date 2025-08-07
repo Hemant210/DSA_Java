@@ -11,7 +11,8 @@ public class Convert_BST {
         TreeNode left;
         TreeNode right;
 
-        TreeNode() {}
+        TreeNode() {
+        }
 
         TreeNode(int val) {
             this.val = val;
@@ -31,7 +32,8 @@ public class Convert_BST {
         }
 
         private TreeNode buildBST(int[] nums, int left, int right) {
-            if (left > right) return null;
+            if (left > right)
+                return null;
 
             int mid = left + (right - left) / 2;
             TreeNode root = new TreeNode(nums[mid]);
@@ -45,7 +47,8 @@ public class Convert_BST {
         // Level-order traversal that prints tree like LeetCode
         public List<String> levelOrder(TreeNode root) {
             List<String> result = new ArrayList<>();
-            if (root == null) return result;
+            if (root == null)
+                return result;
 
             Queue<TreeNode> queue = new LinkedList<>();
             queue.add(root);
@@ -74,8 +77,8 @@ public class Convert_BST {
 
     // Main method
     public static void main(String[] args) {
-        //int[] nums = {-10, -3, 0, 5, 9};
-        int[] nums = {1,3};
+        // int[] nums = {-10, -3, 0, 5, 9};
+        int[] nums = { 1, 3 };
 
         Solution sol = new Solution();
         TreeNode bstRoot = sol.sortedArrayToBST(nums);
