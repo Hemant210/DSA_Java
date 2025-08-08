@@ -32,6 +32,7 @@ public class BST {
     }
 
     // Search function to found a value into the BST
+    // Time complexity :- O(H)
     public static Boolean search(Node root, int key) {
         if (root == null) {
             return false;
