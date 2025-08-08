@@ -1,5 +1,7 @@
 package Practice;
 
+import java.util.ArrayList;
+
 public class BST_practice {
 
     // Node class represents each node in the BST
@@ -13,6 +15,7 @@ public class BST_practice {
         }
     }
 
+    // Print all values in range [x, y]
     public static void printInrange(Node root, int x, int y) {
         if (root == null) {
             return;
@@ -59,8 +62,32 @@ public class BST_practice {
         return root;
     }
 
+    public static void printpath(ArrayList<Integer> path){
+        for(int i=0; i<path.size(); i++){
+            System.out.println(path.get(i)+ "->");
+        }
+
+        System.out.println();
+    }
+    public static void printRoofleaf(Node root, ArrayList<Integer> path){
+        if (root == null) {
+            return;
+        }
+
+        path.add(root.data);
+
+        if (root.left == null && root.right == null) {
+            printpath(path);
+        } else {
+            printRoofleaf(root.left, path);
+            printRoofleaf(root.right, path);
+        }
+
+        path.remove(path.size()-1);
+    }
+
     public static void main(String[] args) {
-        int values[] = { 5, 1, 3, 4, 2, 7 };
+        int values[] = { 8,5,3,6,10,11,14 };
         Node root = null;
 
         for (int i = 0; i < values.length; i++) {
@@ -71,7 +98,9 @@ public class BST_practice {
         inorder(root);
         System.out.println();
 
-        System.out.print("Nodes in range [" + 2 + ", " + 5 + "]: ");
-        printInrange(root, 2, 5);
+        // System.out.print("Nodes in range [" + 2 + ", " + 5 + "]: ");
+        // printInrange(root, 2, 5);
+
+        printRoofleaf(root, new ArrayList<>());
     }
 }
