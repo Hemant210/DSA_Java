@@ -19,7 +19,7 @@ public class BST {
             return root;
         }
 
-        // If value is less than current node's data, insert into left subtree
+        // If value is less than current node's data, insert into left subtree tv   
         if (root.data > val) {
             root.left = insert(root.left, val);
         }
