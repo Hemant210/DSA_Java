@@ -15,6 +15,19 @@ public class BST_practice {
         }
     }
 
+    //Minimum element in BST
+    public static int getMinimum(Node root){
+        if (root == null) {
+            return -1;
+        }
+
+        Node currentNode = root;
+        while (currentNode.left != null) {
+            currentNode = currentNode.left;
+        }
+
+        return currentNode.data;
+    }
     // Print all values in range [x, y]
     public static void printInrange(Node root, int x, int y) {
         if (root == null) {
@@ -103,6 +116,7 @@ public class BST_practice {
         // System.out.print("Nodes in range [" + 2 + ", " + 5 + "]: ");
         // printInrange(root, 2, 5);
 
-        printRoofleaf(root, new ArrayList<>());
+        //printRoofleaf(root, new ArrayList<>());
+        System.out.println(getMinimum(root));
     }
 }
