@@ -62,14 +62,16 @@ public class BST_practice {
         return root;
     }
 
-    public static void printpath(ArrayList<Integer> path){
-        for(int i=0; i<path.size(); i++){
-            System.out.println(path.get(i)+ "->");
+    public static void printpath(ArrayList<Integer> path) {
+        for (int i = 0; i < path.size(); i++) {
+            System.out.println(path.get(i) + "->");
         }
 
         System.out.println();
     }
-    public static void printRoofleaf(Node root, ArrayList<Integer> path){
+
+    // Print Root to leaf Paths
+    public static void printRoofleaf(Node root, ArrayList<Integer> path) {
         if (root == null) {
             return;
         }
@@ -83,11 +85,11 @@ public class BST_practice {
             printRoofleaf(root.right, path);
         }
 
-        path.remove(path.size()-1);
+        path.remove(path.size() - 1);
     }
 
     public static void main(String[] args) {
-        int values[] = { 8,5,3,6,10,11,14 };
+        int values[] = { 8, 5, 3, 6, 10, 11, 14 };
         Node root = null;
 
         for (int i = 0; i < values.length; i++) {
