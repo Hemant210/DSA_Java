@@ -15,6 +15,19 @@ public class BST_practice {
         }
     }
 
+    //Predecessor and Successor
+    public Node findmax(Node root){
+        if (root == null) {
+            return null;
+        }
+
+        while (root.right != null) {
+            root = root.right;
+        }
+
+        return root;
+    }
+
     //Minimum element in BST
     public static int getMinimum(Node root){
         if (root == null) {
