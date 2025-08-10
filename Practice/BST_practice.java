@@ -28,6 +28,18 @@ public class BST_practice {
         return root;
     }
 
+    public Node findmin(Node root){
+        if (root == null) {
+            return null;
+        }
+
+        while (root.left != null) {
+            root = root.left;
+        }
+
+        return root;
+    }
+
     //Minimum element in BST
     public static int getMinimum(Node root){
         if (root == null) {
