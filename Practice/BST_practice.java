@@ -15,8 +15,9 @@ public class BST_practice {
         }
     }
 
-    //Predecessor and Successor
-    public Node findmax(Node root){
+    // Predecessor and Successor
+    // Function to find max node in a subtree
+    public static Node findmax(Node root) {
         if (root == null) {
             return null;
         }
@@ -28,7 +29,8 @@ public class BST_practice {
         return root;
     }
 
-    public Node findmin(Node root){
+    // Function to find min node in a subtree
+    public static Node findmin(Node root) {
         if (root == null) {
             return null;
         }
@@ -40,8 +42,35 @@ public class BST_practice {
         return root;
     }
 
-    //Minimum element in BST
-    public static int getMinimum(Node root){
+    public static ArrayList<Node> findPreSuc(Node root, int key){
+        Node prev = null, suc = null;
+        Node curr = root;
+
+        while (curr != null) {
+            if (curr.data == key) {
+                if (curr.left != null) {
+                    prev = findmax(curr.left);
+                } if (curr.right != null) {
+                    suc = findmin(curr.right);
+                }
+                break;
+            } else if (curr.data > key) {
+                suc = curr;
+                curr = curr.left;
+            } else {
+                prev = curr;
+                curr = curr.right;
+            }
+        }
+
+        ArrayList<Node> ans = new ArrayList<>();
+        ans.add(prev);
+        ans.add(suc);
+        return ans;
+    }
+
+    // Minimum element in BST
+    public static int getMinimum(Node root) {
         if (root == null) {
             return -1;
         }
@@ -53,6 +82,7 @@ public class BST_practice {
 
         return currentNode.data;
     }
+
     // Print all values in range [x, y]
     public static void printInrange(Node root, int x, int y) {
         if (root == null) {
@@ -141,7 +171,16 @@ public class BST_practice {
         // System.out.print("Nodes in range [" + 2 + ", " + 5 + "]: ");
         // printInrange(root, 2, 5);
 
-        //printRoofleaf(root, new ArrayList<>());
-        System.out.println(getMinimum(root));
+        // printRoofleaf(root, new ArrayList<>());
+        //System.out.println(getMinimum(root));
+
+        ArrayList<Node> result = findPreSuc(root, 5);
+
+        Node pre = result.get(0);
+        Node suc = result.get(1);
+
+        System.out.println("Key: " + 5);
+        System.out.println("Predecessor: " + (pre != null ? pre.data : "None"));
+        System.out.println("Successor: " + (suc != null ? suc.data : "None"));
     }
 }
