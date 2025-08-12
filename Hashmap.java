@@ -14,17 +14,32 @@ public class Hashmap {
         //System.out.println(map);
 
         map.put("India", 180);
-        System.out.println(map);
+        //System.out.println(map);
 
         // Search 
-        if (map.containsKey("China")) {
-            System.err.println("Key is Present");
-        } else {
-            System.out.println("Not present");
+        // if (map.containsKey("China")) {
+        //     System.err.println("Key is Present"); //Key Exits
+        // } else {
+        //     System.out.println("Not present");  // Key Not Exits 
+        // }
+
+       // Get Value
+        //System.out.println(map.get("China")); //Key Exits
+        //System.out.println(map.get("Russia")); // Key Not Exits 
+
+        //For loop :- First way
+        for(Map.Entry<String, Integer> a : map.entrySet()){
+            System.out.println(a.getKey());
+            System.out.println(a.getValue());
         }
 
-        // Get Value
-        System.out.println(map.get("China")); //Key Exits
-        System.out.println(map.get("Russia")); // Key Not Exits 
+        //For loop :- Second way
+        Set<String> keys = map.keySet();
+        for(String key : keys){
+            System.out.println(key + " " + map.get(key));
+        }
+
+        map.remove("China");
+        System.out.println(map);
     }
 }
