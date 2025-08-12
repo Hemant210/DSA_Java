@@ -23,7 +23,7 @@ public class Hashing {
         }
 
         //Delete element 
-        //set.remove(1);
+        set.remove(1);
         if (!set.contains(1)) {
             System.out.println("Set does Not contains we deleted 1");
         }
