@@ -27,18 +27,19 @@ public class Hashmap {
         //System.out.println(map.get("China")); //Key Exits
         //System.out.println(map.get("Russia")); // Key Not Exits 
 
-        //For loop :- First way
+        //For loop :- First way 1
         for(Map.Entry<String, Integer> a : map.entrySet()){
             System.out.println(a.getKey());
             System.out.println(a.getValue());
         }
 
-        //For loop :- Second way
+        // For loop :- Second way
         Set<String> keys = map.keySet();
         for(String key : keys){
             System.out.println(key + " " + map.get(key));
         }
 
+        // Remove
         map.remove("China");
         System.out.println(map);
     }
