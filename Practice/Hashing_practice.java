@@ -19,7 +19,6 @@ public class Hashing_practice {
             }
         }
 
-        kk
         private int n; // number of key-value pairs
         private int N; // number of buckets
         private LinkedList<Node>[] buckets; // array of linked lists
