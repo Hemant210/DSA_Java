@@ -1,8 +1,8 @@
 package Practice;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
+//import java.util.LinkedList;
 
 // public class Hashing_practice {
 
@@ -195,7 +195,6 @@ import java.util.LinkedList;
 // }
 
 //Choose k array elements such that difference of maximum and minimum is minimized
-
 public class Hashing_practice {
 
     static int findMinDiff(int[] arr, int m) {
