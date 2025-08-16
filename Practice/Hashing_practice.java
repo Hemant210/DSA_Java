@@ -204,16 +204,15 @@ public class Hashing_practice {
 
         int minDiff = Integer.MAX_VALUE;
 
-        for (int i = 0; i + m - 1 < n; i++) {
-
-            // calculate difference of current window
-            int diff = arr[i + m - 1] - arr[i];
-
+        for(int i=0;i + m -1 < n; i++){
+        // calculate difference of current window
+        int diff = arr[i + m -1] - arr[i];
+        }
             // if current difference is smaller
             // then update the minimum difference
-            if (diff < minDiff)
+            if (diff < minDiff) {
                 minDiff = diff;
-        }
+            }
         return minDiff;
     }
 
