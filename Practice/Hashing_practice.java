@@ -1,8 +1,6 @@
 package Practice;
 
-//import java.util.ArrayList;
-import java.util.Arrays;
-//import java.util.LinkedList;
+import java.util.*;
 
 // public class Hashing_practice {
 
@@ -195,34 +193,59 @@ import java.util.Arrays;
 // }
 
 //Choose k array elements such that difference of maximum and minimum is minimized
+// public class Hashing_practice {
+
+//     static int findMinDiff(int[] arr, int m) {
+//         int n = arr.length;
+
+//         Arrays.sort(arr);
+
+//         int minDiff = Integer.MAX_VALUE;
+
+//         for (int i = 0; i + m - 1 < n; i++) {
+
+//             // calculate difference of current window
+//             int diff = arr[i + m - 1] - arr[i];
+
+//             // if current difference is smaller
+//             // then update the minimum difference
+//             if (diff < minDiff)
+//                 minDiff = diff;
+//         }
+//         return minDiff;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = { 7, 3, 2, 4, 9, 12, 56 };
+//         int m = 3;
+
+//         System.out.println(findMinDiff(arr, m));
+//     }
+// }
+
+//Majority Element - Hashmap 
+//Time complexity :- O(n)
 public class Hashing_practice {
+    public static void majorityelement(int nums[]){
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int n = nums.length;
 
-    static int findMinDiff(int[] arr, int m) {
- int n = arr.length;
-
-        Arrays.sort(arr);
-
-        int minDiff = Integer.MAX_VALUE;
-
-        for (int i = 0; i + m - 1 < n; i++) {
-
-            // calculate difference of current window
-            int diff = arr[i + m - 1] - arr[i];
-
-            // if current difference is smaller
-            // then update the minimum difference
-            if (diff < minDiff)
-                minDiff = diff;
+        for(int i=0; i<n; i++){
+            if (map.containsKey(nums[i])) {
+                map.put(nums[i], map.get(nums[i]) + 1);
+            } else {
+                map.put(nums[i], 1);
+            }
         }
-        return minDiff;
+
+        for(int key : map.keySet()){
+            if(map.get(key) > n/3) {
+                System.out.println(key);
+            }
+        }
     }
-
     public static void main(String[] args) {
-        int[] arr = {7, 3, 2, 4, 9, 12, 56};
-        int m = 3;
-
-        System.out.println(findMinDiff(arr, m));
+        int nums[] = {1,3,2,5,1,3,1,5,1};
+        majorityelement(nums);
     }
 }
-
-
