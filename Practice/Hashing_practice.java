@@ -198,7 +198,7 @@ import java.util.Arrays;
 public class Hashing_practice {
 
     static int findMinDiff(int[] arr, int m) {
-        int n = arr.length;
+ int n = arr.length;
 
         Arrays.sort(arr);
 
@@ -218,9 +218,11 @@ public class Hashing_practice {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 7, 3, 2, 4, 9, 12, 56 };
+        int[] arr = {7, 3, 2, 4, 9, 12, 56};
         int m = 3;
 
         System.out.println(findMinDiff(arr, m));
     }
 }
+
+
