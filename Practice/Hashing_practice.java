@@ -275,9 +275,34 @@ import java.util.*;
 // }
 
 
-//Union of 2 arrays 
+//Union of 2 arrays print size
+// public class Hashing_practice {
+//     public static int union(int arr1[],int arr2[]){
+//         HashSet <Integer> set = new HashSet<>();
+
+//         for(int i=0; i < arr1.length; i++){
+//             set.add(arr1[i]);
+//         }
+
+//         for(int j=0; j < arr2.length; j++){
+//             set.add(arr2[j]);
+//         }
+
+//         return set.size();
+//     }
+//     public static void main(String[] args) {
+//         int arr1[] = {7,3,9};
+//         int arr2[] = {6,3,9,2,9,4};
+
+//         System.out.println(union(arr1, arr2));
+        
+//     }
+// }
+
+
+//Union of 2 arrays print array
 public class Hashing_practice {
-    public static int union(int arr1[],int arr2[]){
+    public static void union(int arr1[],int arr2[]){
         HashSet <Integer> set = new HashSet<>();
 
         for(int i=0; i < arr1.length; i++){
@@ -288,13 +313,12 @@ public class Hashing_practice {
             set.add(arr2[j]);
         }
 
-        return set.parallelStream();
+        System.out.println(set);
     }
     public static void main(String[] args) {
         int arr1[] = {7,3,9};
         int arr2[] = {6,3,9,2,9,4};
 
-        System.out.println(union(arr1, arr2));
-        
+        union(arr1, arr2);
     }
 }
