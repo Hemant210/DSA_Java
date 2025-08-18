@@ -2,7 +2,6 @@ package Practice;
 
 import java.util.*;
 
-
 // public class Hashing_practice {
 
 //     // Custom HashMap implementation
@@ -253,24 +252,49 @@ import java.util.*;
 
 //Majority Element - Hashmap 
 //Time complexity :- O(n)
+// public class Hashing_practice {
+//     public static void majorityelement(int nums[]) {
+//         HashMap<Integer, Integer> map = new HashMap<>();
+//         int n = nums.length;
+
+//         for (int i = 0; i < n; i++) {
+//             map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
+//         }
+
+//         for (int key : map.keySet()) {
+//             if (map.get(key) > n / 2) {
+//                 System.out.println(key);
+//             }
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         int nums[] = {2,2,1,1,1,2,2};
+//         majorityelement(nums);
+//     }
+// }
+
+
+//Union of 2 arrays 
 public class Hashing_practice {
-    public static void majorityelement(int nums[]) {
-        HashMap<Integer, Integer> map = new HashMap<>();
-        int n = nums.length;
+    public static int union(int arr1[],int arr2[]){
+        HashSet <Integer> set = new HashSet<>();
 
-        for (int i = 0; i < n; i++) {
-            map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
+        for(int i=0; i < arr1.length; i++){
+            set.add(arr1[i]);
         }
 
-        for (int key : map.keySet()) {
-            if (map.get(key) > n / 2) {
-                System.out.println(key);
-            }
+        for(int j=0; j < arr2.length; j++){
+            set.add(arr2[j]);
         }
+
+        return set.parallelStream();
     }
-
     public static void main(String[] args) {
-        int nums[] = {2,2,1,1,1,2,2};
-        majorityelement(nums);
+        int arr1[] = {7,3,9};
+        int arr2[] = {6,3,9,2,9,4};
+
+        System.out.println(union(arr1, arr2));
+        
     }
 }
