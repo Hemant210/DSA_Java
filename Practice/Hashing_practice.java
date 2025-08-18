@@ -324,10 +324,37 @@ import java.util.*;
 // }
 
 //Instersection of 2 arrays print size
+// public class Hashing_practice {
+//     public static int instersection(int arr1[], int arr2[]){
+//         HashSet <Integer> set = new HashSet<>();
+//         int count = 0;
+
+//         for(int i=0; i < arr1.length; i++){
+//             set.add(arr1[i]);
+//         }
+
+//         for(int j=0; j < arr2.length; j++){
+//             if (set.contains(arr2[j])) {
+//                 count++;
+//                 set.remove(arr2[j]);
+//             }
+//         }
+
+//         return count;
+//     }
+//     public static void main(String[] args) {
+//         int arr1[] = {7,3,9};
+//         int arr2[] = {6,3,9,2,9,4};
+
+//         System.out.println(instersection(arr1, arr2));
+//     }
+// }
+
+//Instersection of 2 arrays print array
 public class Hashing_practice {
-    public static int instersection(int arr1[], int arr2[]){
+    public static void instersection(int arr1[], int arr2[]){
         HashSet <Integer> set = new HashSet<>();
-        int count = 0;
+        HashSet <Integer> intersectionSet = new HashSet<>();
 
         for(int i=0; i < arr1.length; i++){
             set.add(arr1[i]);
@@ -335,17 +362,17 @@ public class Hashing_practice {
 
         for(int j=0; j < arr2.length; j++){
             if (set.contains(arr2[j])) {
-                count++;
+                intersectionSet.add(arr2[j]);
                 set.remove(arr2[j]);
             }
         }
 
-        return count;
+        System.out.println(intersectionSet);
     }
     public static void main(String[] args) {
         int arr1[] = {7,3,9};
         int arr2[] = {6,3,9,2,9,4};
 
-        System.out.println(instersection(arr1, arr2));
+        instersection(arr1, arr2);
     }
 }
