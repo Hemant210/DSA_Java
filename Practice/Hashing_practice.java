@@ -415,24 +415,28 @@ import java.util.*;
 
 //Subarray sum equal to K
 public class Hashing_practice {
-    public static void subarray(int arr[]){
-
-    }
     public static void main(String[] args) {
-        int arr[] = {10, 2, -2, -20, 10};
-        int k = -10;
+        int arr[] = {10, 2, -2, -20, 10}; 
+        int k = -10; 
+
         HashMap<Integer, Integer> map = new HashMap<>();
 
+        // Initialize map with 0 sum occurring once
         map.put(0, 1);
-        int ans = 0;
-        int sum = 0;
-        for(int j=0; j < arr.length; j++){
-            sum += arr[j];
 
+        int ans = 0; // to count number of subarrays with sum = k
+        int sum = 0; // cumulative prefix sum
+
+        // Traverse the array
+        for (int j = 0; j < arr.length; j++) {
+            sum += arr[j]; // update prefix sum
+
+            // If (sum - k) is found in map, it means subarray with sum k exists
             if (map.containsKey(sum - k)) {
-                ans += map.get(sum - k);
+                ans += map.get(sum - k); // add frequency of (sum - k)
             }
 
+            // Update frequency of current sum in map
             if (map.containsKey(sum)) {
                 map.put(sum, map.get(sum) + 1);
             } else {
