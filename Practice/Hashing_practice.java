@@ -1,6 +1,7 @@
 package Practice;
 
 import java.util.*;
+import java.util.function.Function;
 
 // public class Hashing_practice {
 
@@ -274,7 +275,6 @@ import java.util.*;
 //     }
 // }
 
-
 //Union of 2 arrays print size
 // public class Hashing_practice {
 //     public static int union(int arr1[],int arr2[]){
@@ -295,10 +295,9 @@ import java.util.*;
 //         int arr2[] = {6,3,9,2,9,4};
 
 //         System.out.println(union(arr1, arr2));
-        
+
 //     }
 // }
-
 
 //Union of 2 arrays print array
 // public class Hashing_practice {
@@ -414,36 +413,71 @@ import java.util.*;
 // }
 
 //Subarray sum equal to K
+// public class Hashing_practice {
+//     public static void main(String[] args) {
+//         int arr[] = {10, 2, -2, -20, 10}; 
+//         int k = -10; 
+
+//         HashMap<Integer, Integer> map = new HashMap<>();
+
+//         // Initialize map with 0 sum occurring once
+//         map.put(0, 1);
+
+//         int ans = 0; // to count number of subarrays with sum = k
+//         int sum = 0; // cumulative prefix sum
+
+//         // Traverse the array
+//         for (int j = 0; j < arr.length; j++) {
+//             sum += arr[j]; // update prefix sum
+
+//             // If (sum - k) is found in map, it means subarray with sum k exists
+//             if (map.containsKey(sum - k)) {
+//                 ans += map.get(sum - k); // add frequency of (sum - k)
+//             }
+
+//             // Update frequency of current sum in map
+//             if (map.containsKey(sum)) {
+//                 map.put(sum, map.get(sum) + 1);
+//             } else {
+//                 map.put(sum, 1);
+//             }
+//         }
+
+//         System.out.println(ans);
+//     }
+// }
+
+//Top K Frequent Elements
 public class Hashing_practice {
-    public static void main(String[] args) {
-        int arr[] = {10, 2, -2, -20, 10}; 
-        int k = -10; 
-
-        HashMap<Integer, Integer> map = new HashMap<>();
-
-        // Initialize map with 0 sum occurring once
-        map.put(0, 1);
-
-        int ans = 0; // to count number of subarrays with sum = k
-        int sum = 0; // cumulative prefix sum
-
-        // Traverse the array
-        for (int j = 0; j < arr.length; j++) {
-            sum += arr[j]; // update prefix sum
-
-            // If (sum - k) is found in map, it means subarray with sum k exists
-            if (map.containsKey(sum - k)) {
-                ans += map.get(sum - k); // add frequency of (sum - k)
-            }
-
-            // Update frequency of current sum in map
-            if (map.containsKey(sum)) {
-                map.put(sum, map.get(sum) + 1);
-            } else {
-                map.put(sum, 1);
-            }
+    
+    //Function to return top K frequent elements
+    public static List<Integer> topKFrequent(int[] nums, int k) {
+        // Step 1: Count frequency of each number
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int n : nums) {
+            map.put(n, map.getOrDefault(n, 0) + 1);
         }
 
-        System.out.println(ans);
+        // Step 2: Use a max-heap (priority queue) based on frequency
+        PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
+
+        pq.addAll(map.entrySet());
+
+        // Step 3: Take out top k elements
+        List<Integer> res = new ArrayList<>();
+        for (int i = 0; i < k; i++) {
+            res.add(pq.poll().getKey());
+        }
+
+        return res;
+    }
+
+    public static void main(String[] args) {
+        int arr[] = { 1, 1, 1, 2, 2, 3 };
+        int k = 2;
+
+        List<Integer> result = topKFrequent(arr, k);
+        System.out.println("Top " + k + " frequent elements: " + result);
+
     }
 }
