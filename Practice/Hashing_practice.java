@@ -1,7 +1,6 @@
 package Practice;
 
 import java.util.*;
-import java.util.function.Function;
 
 // public class Hashing_practice {
 
