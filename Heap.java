@@ -1,3 +1,5 @@
+//Heap Sort
+//Sort the array by placing largest element at end of unsorted array.
 public class Heap {
     public static void heaping(int arr[], int n,int i){
 
