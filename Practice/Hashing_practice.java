@@ -447,36 +447,66 @@ import java.util.*;
 // }
 
 //Top K Frequent Elements
+// public class Hashing_practice {
+
+//     //Function to return top K frequent elements
+//     public static List<Integer> topKFrequent(int[] nums, int k) {
+//         // Step 1: Count frequency of each number
+//         Map<Integer, Integer> map = new HashMap<>();
+//         for (int n : nums) {
+//             map.put(n, map.getOrDefault(n, 0) + 1);
+//         }
+
+//         // Step 2: Use a max-heap (priority queue) based on frequency
+//         PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
+
+//         pq.addAll(map.entrySet());
+
+//         // Step 3: Take out top k elements
+//         List<Integer> res = new ArrayList<>();
+//         for (int i = 0; i < k; i++) {
+//             res.add(pq.poll().getKey());
+//         }
+
+//         return res;
+//     }
+
+//     public static void main(String[] args) {
+//         int arr[] = { 1, 1, 1, 2, 2, 3 };
+//         int k = 2;
+
+//         List<Integer> result = topKFrequent(arr, k);
+//         System.out.println("Top " + k + " frequent elements: " + result);
+
+//     }
+// }
+
+//Find k largest elements in an array
 public class Hashing_practice {
-    
-    //Function to return top K frequent elements
-    public static List<Integer> topKFrequent(int[] nums, int k) {
-        // Step 1: Count frequency of each number
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int n : nums) {
-            map.put(n, map.getOrDefault(n, 0) + 1);
-        }
+    static ArrayList<Integer> kLargest(int[] arr, int k) {
+        int n = arr.length;
 
-        // Step 2: Use a max-heap (priority queue) based on frequency
-        PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
+        // Convert int type to Integer
+        // for sorting with a comparator
+        Integer[] arrInteger = Arrays.stream(arr).boxed().toArray(Integer[]::new);
 
-        pq.addAll(map.entrySet());
+        // Sort the array in descending order
+        Arrays.sort(arrInteger, Collections.reverseOrder());
 
-        // Step 3: Take out top k elements
-        List<Integer> res = new ArrayList<>();
-        for (int i = 0; i < k; i++) {
-            res.add(pq.poll().getKey());
-        }
+        // Store the first k elements in result list
+        ArrayList<Integer> res = new ArrayList<>();
+        for (int i = 0; i < k; i++)
+            res.add(arrInteger[i]);
 
         return res;
     }
 
     public static void main(String[] args) {
-        int arr[] = { 1, 1, 1, 2, 2, 3 };
-        int k = 2;
+        int[] arr = { 1, 23, 12, 9, 30, 2, 50 };
+        int k = 3;
 
-        List<Integer> result = topKFrequent(arr, k);
-        System.out.println("Top " + k + " frequent elements: " + result);
-
+        ArrayList<Integer> res = kLargest(arr, k);
+        for (int ele : res)
+            System.out.print(ele + " ");
     }
 }
