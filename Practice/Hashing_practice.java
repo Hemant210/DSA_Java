@@ -482,28 +482,28 @@ import java.util.*;
 // }
 
 //Choose k array elements such that difference of maxium and minimum is minimized
-// public class Hashing_practice {
-//     public static int findMinDiff(int[] arr, int m){
-//         int n = arr.length;
+public class Hashing_practice {
+    public static int findMinDiff(int[] arr, int m){
+        int n = arr.length;
 
-//         Arrays.sort(arr);
+        Arrays.sort(arr);
 
-//         int minDiff = Integer.MAX_VALUE;
+        int minDiff = Integer.MAX_VALUE;
 
-//         for(int i = 0; i + m - 1 < n; i++){
-//             int diff = arr[i + m - 1] - arr[i];
+        for(int i = 0; i + m - 1 < n; i++){
+            int diff = arr[i + m - 1] - arr[i];
 
-//             if (diff < minDiff) {
-//                 minDiff = diff;
-//             }
-//         }
-//             return minDiff;
-//     }
+            if (diff < minDiff) {
+                minDiff = diff;
+            }
+        }
+            return minDiff;
+    }
 
-//     public static void main(String[] args) {
-//         int[] arr = {7, 3, 2, 4, 9, 12, 56};
-//         int m = 3;
+    public static void main(String[] args) {
+        int[] arr = {7, 3, 2, 4, 9, 12, 56};
+        int m = 3;
 
-//         System.out.println(findMinDiff(arr, m));
-//     }
-// }
+        System.out.println(findMinDiff(arr, m));
+    }
+}
