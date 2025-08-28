@@ -482,28 +482,62 @@ import java.util.*;
 // }
 
 //Choose k array elements such that difference of maxium and minimum is minimized
+// public class Hashing_practice {
+//     public static int findMinDiff(int[] arr, int m){
+//         int n = arr.length;
+
+//         Arrays.sort(arr);
+
+//         int minDiff = Integer.MAX_VALUE;
+
+//         for(int i = 0; i + m - 1 < n; i++){
+//             int diff = arr[i + m - 1] - arr[i];
+
+//             if (diff < minDiff) {
+//                 minDiff = diff;
+//             }
+//         }
+//             return minDiff;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = {7, 3, 2, 4, 9, 12, 56};
+//         int m = 3;
+
+//         System.out.println(findMinDiff(arr, m));
+//     }
+// }
+
+//Check if an array is subset of another array
+
+//Using Hashing- O(m + n) Time and O(m) Space
 public class Hashing_practice {
-    public static int findMinDiff(int[] arr, int m){
-        int n = arr.length;
+    public static boolean isSubset(int[] a, int[] b){
+         // Create a hash set and insert all elements of a
+        Set<Integer> hashSet = new HashSet<>();
+        for (int num : a) {
+            hashSet.add(num);
+        }
 
-        Arrays.sort(arr);
-
-        int minDiff = Integer.MAX_VALUE;
-
-        for(int i = 0; i + m - 1 < n; i++){
-            int diff = arr[i + m - 1] - arr[i];
-
-            if (diff < minDiff) {
-                minDiff = diff;
+        // Check each element of b in the hash set
+        for (int num : b) {
+            if (!hashSet.contains(num)) {
+                return false;
             }
         }
-            return minDiff;
+
+        // If all elements of b are found in the hash set
+        return true;
     }
-
     public static void main(String[] args) {
-        int[] arr = {7, 3, 2, 4, 9, 12, 56};
-        int m = 3;
+         int[] a = { 11, 1, 13, 21, 3, 7 };
+        int[] b = { 11, 3, 7, 1 };
 
-        System.out.println(findMinDiff(arr, m));
+        if (isSubset(a, b)) {
+            System.out.println("true");
+        }
+        else {
+            System.out.println("false");
+        }
     }
 }
