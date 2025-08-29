@@ -511,68 +511,68 @@ import java.util.*;
 //Check if an array is subset of another array
 
 //Using Hashing- O(m + n) Time and O(m) Space
-// public class Hashing_practice {
-//     public static boolean isSubset(int[] a, int[] b){
-//          // Create a hash set and insert all elements of a
-//         Set<Integer> hashSet = new HashSet<>();
-//         for (int num : a) {
-//             hashSet.add(num);
-//         }
-
-//         // Check each element of b in the hash set
-//         for (int num : b) {
-//             if (!hashSet.contains(num)) {
-//                 return false;
-//             }
-//         }
-
-//         // If all elements of b are found in the hash set
-//         return true;
-//     }
-//     public static void main(String[] args) {
-//          int[] a = { 11, 1, 13, 21, 3, 7 };
-//         int[] b = { 11, 3, 7, 1 };
-
-//         if (isSubset(a, b)) {
-//             System.out.println("true");
-//         }
-//         else {
-//             System.out.println("false");
-//         }
-//     }
-// }
-
-//Using Nested Loops - O(m*n) Time and O(1) Space
 public class Hashing_practice {
-    static boolean isSubset(int[] a, int[] b) {
-        // Iterate over each element in the second array
-        int m = a.length;
-        int n = b.length;
-        for (int i = 0; i < n; i++) {
-            boolean found = false;
-            // Check if the element exists in the first array
-            for (int j = 0; j < m; j++) {
-                if (b[i] == a[j]) {
-                    found = true;
-                    break;
-                }
-            }
-            // If any element is not found, return false
-            if (!found)
-                return false;
+    public static boolean isSubset(int[] a, int[] b){
+         // Create a hash set and insert all elements of a
+        Set<Integer> hashSet = new HashSet<>();
+        for (int num : a) {
+            hashSet.add(num);
         }
-        // If all elements are found, return true
+
+        // Check each element of b in the hash set
+        for (int num : b) {
+            if (!hashSet.contains(num)) {
+                return false;
+            }
+        }
+
+        // If all elements of b are found in the hash set
         return true;
     }
-
     public static void main(String[] args) {
-        int[] a = { 11, 1, 13, 21, 3, 7 };
+         int[] a = { 11, 1, 13, 21, 3, 7 };
         int[] b = { 11, 3, 7, 1 };
 
         if (isSubset(a, b)) {
             System.out.println("true");
-        } else {
+        }
+        else {
             System.out.println("false");
         }
     }
 }
+
+//Using Nested Loops - O(m*n) Time and O(1) Space
+// public class Hashing_practice {
+//     static boolean isSubset(int[] a, int[] b) {
+//         // Iterate over each element in the second array
+//         int m = a.length;
+//         int n = b.length;
+//         for (int i = 0; i < n; i++) {
+//             boolean found = false;
+//             // Check if the element exists in the first array
+//             for (int j = 0; j < m; j++) {
+//                 if (b[i] == a[j]) {
+//                     found = true;
+//                     break;
+//                 }
+//             }
+//             // If any element is not found, return false
+//             if (!found)
+//                 return false;
+//         }
+//         // If all elements are found, return true
+//         return true;
+//     }
+
+//     public static void main(String[] args) {
+//         int[] a = { 11, 1, 13, 21, 3, 7 };
+//         int[] b = { 11, 3, 7, 1 };
+
+//         if (isSubset(a, b)) {
+//             System.out.println("true");
+//         } else {
+//             System.out.println("false");
+//         }
+//     }
+// }
