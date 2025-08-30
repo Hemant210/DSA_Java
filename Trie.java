@@ -14,8 +14,10 @@ public class Trie {
         }
     }
 
+    //
     static Node root = new Node();
     public static void main(String[] args) {
         String wordsp[] = {"the", "a", "there", "their", "any"};
     }
 }
+ 
