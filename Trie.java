@@ -1,5 +1,4 @@
 public class Trie {
-
     static class Node {
         Node[] children;
         boolean eow;
@@ -13,6 +12,7 @@ public class Trie {
             eow = false;
         }
     }
+
     static Node root = new Node();
     public static void main(String[] args) {
         String wordsp[] = {"the", "a", "there", "their", "any"};
