@@ -1,3 +1,4 @@
+//Trie practice example
 public class Trie {
     static class Node {
         Node[] children;
@@ -17,5 +18,6 @@ public class Trie {
     public static void main(String[] args) {
         String wordsp[] = {"the", "a", "there", "their", "any"};
     }
+
 }
  
