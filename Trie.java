@@ -35,10 +35,7 @@ public class Trie {
         }
     }
 
-    //Search a word into Trie
-    public static String search(String word){
-        
-    }
+
     public static void main(String[] args) {
         String words[] = { "the", "a", "there", "their", "any" };
 
