@@ -1,3 +1,4 @@
+//Example Trie
 public class Trie {
     // Node class represents each character node in Trie
     static class Node {
