@@ -1,4 +1,5 @@
-// Corrected Example Trie
+import Leetcode.swap_Nodes;
+
 public class Trie {
     // Node class represents each character node in Trie
     static class Node {
@@ -29,6 +30,7 @@ public class Trie {
     }
 
     // Search a word in Trie
+    //Time complexity - O(L)
     public static boolean search(String word) {
         Node curr = root;  // ✅ start from root each time
         for (int i = 0; i < word.length(); i++) {
@@ -40,19 +42,41 @@ public class Trie {
 
             curr = curr.children[idx]; // move forward
         }
-        return true;  // ✅ must be end of word
+        return curr.eow;  // ✅ must be end of word
+    }
+
+    public static boolean wordbreak(String key){
+        if (key.length() == 0) {
+            return true;
+        }
+
+        for(int i = 0; i <= key.length(); i++){
+            String firstpart = key.substring(0, i);
+            String secondpart = key.substring(i);
+
+            if (search(firstpart) && wordbreak(secondpart)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public static void main(String[] args) {
-        String[] words = { "the", "a", "there", "their", "any" };
+        String[] words = { "i", "like", "sam", "samsung", "mobile" };
+        String key = "ilikesamsung";
 
         for (String w : words) {
             insert(w);
         }
 
-        System.out.println(search("their")); // true
-        System.out.println(search("thier")); // false
-        System.out.println(search("an"));    // false
-        System.out.println(search("any"));   // true
+        System.out.println(wordbreak(key));
+
+
+
+        // System.out.println(search("their")); // true
+        // System.out.println(search("thier")); // false
+        // System.out.println(search("an"));    // false
+        // System.out.println(search("any"));   // true
     }
 }
