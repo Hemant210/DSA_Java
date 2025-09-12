@@ -1,16 +1,13 @@
-//Example Trie
+// Corrected Example Trie
 public class Trie {
     // Node class represents each character node in Trie
     static class Node {
         Node[] children; // Array to hold references of next characters (a-z)
-        boolean eow;     // Flag to mark End Of Word (true if word ends here)
+        boolean eow;     // Flag to mark End Of Word
 
         public Node() {
-            children = new Node[26]; 
-            for (int i = 0; i < 26; i++) {
-                children[i] = null; 
-            }
-            eow = false; // By default, not the end of any word
+            children = new Node[26];
+            eow = false;
         }
     }
 
@@ -18,34 +15,44 @@ public class Trie {
 
     // Insert a word into Trie
     public static void insert(String word) {
+        Node curr = root;  // ✅ use a local pointer
         for (int i = 0; i < word.length(); i++) {
-            int idx = word.charAt(i) - 'a'; // Find array index (0-25)
+            int idx = word.charAt(i) - 'a';
 
-            // If node does not exist for this character, create it
-            if (root.children[idx] == null) {
-                root.children[idx] = new Node();
+            if (curr.children[idx] == null) {
+                curr.children[idx] = new Node();
             }
 
-            // If we are at the last character of the word, mark end of word
-            if (i == word.length() - 1) {
-                root.children[idx].eow = true;
-            }
-
-            // Move to the next node (⚠️ changes global root, should use curr)
-            root = root.children[idx];
+            curr = curr.children[idx];  // move forward
         }
+        curr.eow = true; // ✅ mark end after finishing
     }
 
-    //Search a word into Trie
-    public static String search(String word){
-        
+    // Search a word in Trie
+    public static boolean search(String word) {
+        Node curr = root;  // ✅ start from root each time
+        for (int i = 0; i < word.length(); i++) {
+            int idx = word.charAt(i) - 'a';
+
+            if (curr.children[idx] == null) {
+                return false; // path not found
+            }
+
+            curr = curr.children[idx]; // move forward
+        }
+        return true;  // ✅ must be end of word
     }
-    
+
     public static void main(String[] args) {
-        String words[] = { "the", "a", "there", "their", "any" };
+        String[] words = { "the", "a", "there", "their", "any" };
 
-        for (int i = 0; i < words.length; i++) {
-            insert(words[i]);
+        for (String w : words) {
+            insert(w);
         }
+
+        System.out.println(search("their")); // true
+        System.out.println(search("thier")); // false
+        System.out.println(search("an"));    // false
+        System.out.println(search("any"));   // true
     }
 }
