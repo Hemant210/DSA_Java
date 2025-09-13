@@ -64,7 +64,7 @@ public class Trie {
     // Starts with problem - prefix
     public static boolean startprefix(String prefix) {
         Node curr = root;
-        for (int i = 0; i < prefix.length(); i++) {
+        for (int i = 0;  i < prefix.length(); i++) {
             int idx = prefix.charAt(i) - 'a';
 
             if (curr.children[idx] == null) {
@@ -77,18 +77,40 @@ public class Trie {
         return true;
     }
 
-    public static void main(String[] args) {
-        // String[] words = { "i", "like", "sam", "samsung", "mobile" };
-        // String key = "ilikesamsung";
-
-        String[] words = { "appple", "app", "mango", "man", "woman" };
-        String prefix = "app";
-
-        for (String w : words) {
-            insert(w);
+    //Count Unique Substring 
+    public static int countNode(Node root){
+        if (root == null) {
+            return 0;
         }
 
-        System.out.println(startprefix(prefix));
+        int count = 0;
+        for(int i=0; i < 26; i++){
+            if (root.children[i] != null) {
+                count += countNode(root.children[i]);
+            }
+        }
+
+        return count+1;
+    }
+    public static void main(String[] args) {
+        //String[] words = { "i", "like", "sam", "samsung", "mobile" };
+        // String key = "ilikesamsung";
+
+        // String[] words = { "appple", "app", "mango", "man", "woman" };
+        // String prefix = "app";
+
+        String str = "apple";
+
+        for(int i = 0; i < str.length(); i++){
+            String suffix = str.substring(i);
+            insert(suffix);
+        }
+          
+        // for (String w : words) {
+        //     insert(w);
+        // }
+
+        // System.out.println(startprefix(prefix));
 
         // System.out.println(wordbreak(key));
 
@@ -96,5 +118,7 @@ public class Trie {
         // System.out.println(search("thier")); // false
         // System.out.println(search("an")); // false
         // System.out.println(search("any")); // true
+
+        System.out.println(countNode(root));
     }
 }
