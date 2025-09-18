@@ -138,9 +138,10 @@ public class Trie {
         System.out.println(ans);  
 
         // System.out.println(startprefix("app"));   // true
-         System.out.println(wordbreak("ilikesamsung")); // true/false
+        // System.out.println(wordbreak("ilikesamsung")); // true/false
         // System.out.println(search("apple"));     // true
         // System.out.println(search("applf"));     // false
         // System.out.println(countNode(root));     // number of nodes
     } 
 }
+    
