@@ -51,7 +51,7 @@ public class Graph {
         creategraph(graph);
 
         // Example: print all neighbours of vertex 2
-        // neighbours = all destination vertices connected from src = 2
+        // neighbours = all destination vertices connected from src = 2 with weight
         for(int i = 0; i < graph[2].size(); i++){
             Edge e = graph[2].get(i);   // get edge from adjacency list
             System.out.println(e.dest + "," + e.wght); // print destination node
