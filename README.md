@@ -36,6 +36,5 @@ This repository is intended to be:
 ## 🤝 Contributing
 
 This is primarily my learning space, but **PRs for improvements, optimizations, or better explanations are always welcome**!
-Let’s make DSA easier for everyone.
 
 ---
