@@ -11,9 +11,9 @@ public class Graph_practice {
         int wt;
 
         public Edge(int s, int d, int w) {
-            this.src = s;   // source vertex
-            this.dest = d;  // destination vertex
-            this.wt = w;    // weight of the edge
+            this.src = s; // source vertex
+            this.dest = d; // destination vertex
+            this.wt = w; // weight of the edge
         }
     }
 
@@ -60,7 +60,7 @@ public class Graph_practice {
         while (!q.isEmpty()) {
             int curr = q.remove(); // dequeue front element
 
-            if (!visited[curr]) {  // if not visited, process it
+            if (!visited[curr]) { // if not visited, process it
                 System.out.print(curr + " "); // print current node
                 visited[curr] = true; // mark as visited
 
@@ -74,19 +74,70 @@ public class Graph_practice {
         System.out.println(); // print newline after traversal
     }
 
+    // Depth First Search (DFS) traversal
+    public static void DFS(ArrayList<Edge> graph[], int curr, boolean vis[]) {
+        System.out.println(curr + " ");
+        vis[curr] = true;
+
+        for (int i = 0; i < graph[curr].size(); i++) {
+            Edge e = graph[curr].get(i);
+            if (vis[e.dest] == false) {
+                DFS(graph, e.dest, vis);
+            }
+        }
+
+    }
+
+    public static void printAllpath(ArrayList<Edge> graph[], int src, int tar, String path, boolean vis[]) {
+
+        // Base case: If source is the target, we have found a complete path
+        if (src == tar) {
+            System.out.println(path); // Print the current path
+            return;
+        }
+
+        // Iterate over all edges/adjacent nodes of the current source node
+        for (int i = 0; i < graph[src].size(); i++) {
+            Edge e = graph[src].get(i);
+
+            // Only visit the node if it has not been visited yet (to avoid cycles)
+            if (!vis[e.dest]) {
+                vis[e.dest] = true; // Mark node as visited
+                printAllpath(graph, e.dest, tar, path + " -> " + e.dest, vis); // Recursive call
+                vis[e.dest] = false; // Backtrack: unmark node for other paths
+            }
+        }
+    }
+
     public static void main(String args[]) {
         /*
-         Graph representation (undirected):
-              1 --- 3
-             / |   / \
-            0  |  /   5 -- 6
-             \ | /   /
-              2 ---- 4
-
+         * Graph representation (undirected):
+         * 
+         *  1 ---- 3
+         * /       | \
+         * 0       |  5 -- 6
+         * \       | /
+         *  2 ---- 4
+         * 
          */
         int V = 7; // total vertices
         ArrayList<Edge> graph[] = new ArrayList[V]; // adjacency list
+
         createGraph(graph); // build graph
-        bfs(graph, V); // perform BFS traversal
+        // boolean vis[] = new boolean[V];
+
+        // for(int i = 0; i < V; i++){
+        // if (vis[i] == false) {
+        // DFS(graph, 0, vis);
+        // }
+        // }
+        // bfs(graph, V); // perform BFS traversal
+
+        int src = 0;
+        int tar = 5;
+        boolean vis[] = new boolean[V];
+        vis[src] = true;
+        printAllpath(graph, src, tar, "" + src, vis); //Print all Path's 
+        System.out.println();
     }
 }
