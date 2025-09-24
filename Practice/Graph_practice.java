@@ -88,6 +88,7 @@ public class Graph_practice {
 
     }
 
+    //Print All Path 
     public static void printAllpath(ArrayList<Edge> graph[], int src, int tar, String path, boolean vis[]) {
 
         // Base case: If source is the target, we have found a complete path
@@ -137,7 +138,7 @@ public class Graph_practice {
         int tar = 5;
         boolean vis[] = new boolean[V];
         vis[src] = true;
-        printAllpath(graph, src, tar, "" + src, vis); //Print all Path's 
+        printAllpath(graph, src, tar, "" + src, vis); //Print all Path's    
         System.out.println();
     }
 }
