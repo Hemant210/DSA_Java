@@ -137,7 +137,7 @@ public class Graph_practice {
         // bfs(graph, V); // perform BFS traversal
 
         int src = 0;
-        int tar = 5;
+        int tar = 6;
         boolean vis[] = new boolean[V];
         vis[src] = true;
         printAllpath(graph, src, tar, "" + src, vis); //Print all Path's    
