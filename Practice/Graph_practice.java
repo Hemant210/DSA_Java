@@ -140,7 +140,7 @@ public class Graph_practice {
         int tar = 6;
         boolean vis[] = new boolean[V];
         vis[src] = true;
-        printAllpath(graph, src, tar, "" + src, vis); //Print all Path's    
+        printAllpath(graph, src, tar, "" + src, vis); 
         System.out.println();
     }
 }
