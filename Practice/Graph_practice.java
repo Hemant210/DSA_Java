@@ -51,6 +51,7 @@ public class Graph_practice {
     }
 
     // Breadth First Search (BFS) traversal
+    //Time complexity - O(V+V)
     public static void bfs(ArrayList<Edge> graph[], int V) {
         boolean visited[] = new boolean[V]; // visited array to mark visited nodes
         Queue<Integer> q = new LinkedList<>(); // queue for BFS
