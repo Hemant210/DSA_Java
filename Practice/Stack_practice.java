@@ -4,7 +4,6 @@ import java.util.Stack;
 
 // public class Stack_practice {
 
-//     // Collection Frameworks
 //     // public static void main(String[] args) {
 //     // Stack<Integer> s = new Stack<>();
 //     // s.push(1); // push element to stack
