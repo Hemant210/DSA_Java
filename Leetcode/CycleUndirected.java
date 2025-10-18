@@ -1,5 +1,7 @@
 package Leetcode;
 
+import java.util.ArrayList;
+
 //Cycle Detection (Undirected Graph)
 public class CycleUndirected {
     public class Edge {
@@ -10,5 +12,9 @@ public class CycleUndirected {
             this.src = s;
             this.dest = d;
         }
+    }
+
+    static void creategrph(ArrayList<Edge> graph[]){
+        
     }
 }
