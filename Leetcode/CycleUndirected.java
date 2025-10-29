@@ -3,7 +3,6 @@ package Leetcode;
 import java.util.ArrayList;
 
 //Cycle Detection (Undirected Graph)
-//Time Complexity - O(n)
 public class CycleUndirected {
     public class Edge {
         int src;
