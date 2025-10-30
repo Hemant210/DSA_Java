@@ -46,7 +46,7 @@ public class Graph_practice {
         graph[5].add(new Edge(5, 4, 1));
         graph[5].add(new Edge(5, 6, 1));
 
-        // ⚠ Mistake corrected: edge from 6 -> 5 should be in graph[6], not graph[5]
+        // Mistake corrected: edge from 6 -> 5 should be in graph[6], not graph[5]
         graph[6].add(new Edge(6, 5, 1));
     }
 
