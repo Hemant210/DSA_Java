@@ -1,4 +1,4 @@
-package Graph;
+package Graph.Assigment_1;
 
 import java.util.*;
 
