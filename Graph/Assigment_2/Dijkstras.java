@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 
 public class Dijkstras {
 
-    // Class to store each edge (connection between two vertices)
+    // Class to store each edge
     static class Edge {
         int src, dest, weight;
 
@@ -34,6 +34,7 @@ public class Dijkstras {
     }
 
     // Dijkstra's algorithm
+    //Time Complexity - O(E + ElogV)
     public static int[] dijkstra(ArrayList<Edge>[] graph, int src) {
         int V = graph.length; // total number of vertices
         int dist[] = new int[V]; // store shortest distance from src to each vertex
