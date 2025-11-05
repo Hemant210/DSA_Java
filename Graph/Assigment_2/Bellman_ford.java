@@ -11,7 +11,7 @@ public class Bellman_ford {
 
         Edge(int s, int d, int w) {
             src = s;
-            dest = d;
+            dest = d; 
             wt = w;
         } 
     }
