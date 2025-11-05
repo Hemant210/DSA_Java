@@ -11,11 +11,12 @@ public class Bellman_ford {
 
         Edge(int s, int d, int w) {
             src = s;
-            dest = d; 
+            dest = d;
             wt = w;
         } 
     }
 
+    //Create Graph Function
     public static void createGraph(ArrayList<Edge>[] graph) {
         for (int i = 0; i < graph.length; i++) {
             graph[i] = new ArrayList<>();
