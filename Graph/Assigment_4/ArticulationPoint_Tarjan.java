@@ -13,7 +13,6 @@ public class ArticulationPoint_Tarjan {
         }
     }
 
-    // Function to create a sample graph
     public static void createGraph(ArrayList<Edge>[] graph) {
         for (int i = 0; i < graph.length; i++) {
             graph[i] = new ArrayList<>();
@@ -42,7 +41,6 @@ public class ArticulationPoint_Tarjan {
         graph[4].add(new Edge(4, 3));
     }
 
-    // DFS function for Tarjan’s Algorithm to find articulation points
     public static void dfs(ArrayList<Edge>[] graph, int curr, int par,
                            boolean[] vis, int[] dt, int[] low, int time,
                            boolean[] isArticulation) {
@@ -67,7 +65,6 @@ public class ArticulationPoint_Tarjan {
                 low[curr] = Math.min(low[curr], low[neigh]);
 
                 // Articulation Point Condition:
-                // If curr is not root & dt[curr] <= low[neigh]
                 if (dt[curr] <= low[neigh] && par != -1) {
                     isArticulation[curr] = true;
                 }
@@ -76,13 +73,11 @@ public class ArticulationPoint_Tarjan {
             }
         }
 
-        // Special case: If curr is root and has more than one child
         if (par == -1 && child > 1) {
             isArticulation[curr] = true;
         }
     }
 
-    // Function to find and print all articulation points in the graph
     public static void getArticulation(ArrayList<Edge>[] graph, int V) {
         int[] dt = new int[V];          // discovery time
         int[] low = new int[V];         // lowest reachable discovery time
@@ -110,9 +105,8 @@ public class ArticulationPoint_Tarjan {
         }
     }
 
-    // Driver Function
     public static void main(String[] args) {
-        int V = 5; // number of vertices
+        int V = 5;
         ArrayList<Edge>[] graph = new ArrayList[V];
         createGraph(graph);
 
