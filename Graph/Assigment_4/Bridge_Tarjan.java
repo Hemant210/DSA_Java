@@ -5,7 +5,6 @@ import java.util.ArrayList;
 //Bridge in Graph (Tarjan’s Algorithm)
 public class Bridge_Tarjan {
 
-    // Inner class to represent an edge between two nodes
     static class Edge {
         int src, dest;
         Edge(int s, int d) {
@@ -14,7 +13,6 @@ public class Bridge_Tarjan {
         }
     }
 
-    // Function to create a sample graph
     public static void createGraph(ArrayList<Edge>[] graph) {
         for (int i = 0; i < graph.length; i++) {
             graph[i] = new ArrayList<>();
@@ -40,7 +38,6 @@ public class Bridge_Tarjan {
         graph[4].add(new Edge(4, 3));
     }
 
-    // DFS function for Tarjan's Algorithm to find bridges
     public static void dfs(ArrayList<Edge>[] graph, int curr, int par,
                            boolean[] vis, int[] dt, int[] low, int time) {
 
@@ -50,7 +47,6 @@ public class Bridge_Tarjan {
         for (Edge e : graph[curr]) {
             int neigh = e.dest;
 
-            // Skip the edge to parent
             if (neigh == par) continue;
 
             // Case 1: Back Edge found
@@ -72,7 +68,6 @@ public class Bridge_Tarjan {
         }
     }
 
-    // Function to find all bridges in the graph
     public static void getBridge(ArrayList<Edge>[] graph, int V) {
         int[] dt = new int[V];     // discovery time
         int[] low = new int[V];    // lowest discovery time reachable
@@ -86,9 +81,8 @@ public class Bridge_Tarjan {
         }
     }
 
-    // Driver Function
     public static void main(String[] args) {
-        int V = 5; // number of vertices
+        int V = 5; 
         ArrayList<Edge>[] graph = new ArrayList[V];
         createGraph(graph);
 
