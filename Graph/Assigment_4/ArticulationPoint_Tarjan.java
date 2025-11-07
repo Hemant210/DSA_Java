@@ -2,9 +2,9 @@ package Graph.Assigment_4;
 
 import java.util.ArrayList;
 
+//Articulation Point in Graph (Tarjan’s Algorithm)
 public class ArticulationPoint_Tarjan {
 
-    // Inner class to represent an undirected edge
     static class Edge {
         int src, dest;
         Edge(int s, int d) {
@@ -19,7 +19,6 @@ public class ArticulationPoint_Tarjan {
             graph[i] = new ArrayList<>();
         }
 
-        // Example Graph
         //     0
         //    / \
         //   1   2
