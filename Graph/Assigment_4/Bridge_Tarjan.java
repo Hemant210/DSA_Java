@@ -2,6 +2,7 @@ package Graph.Assigment_4;
 
 import java.util.ArrayList;
 
+//Time complexity - O(V + E)
 //Bridge in Graph (Tarjan’s Algorithm)
 public class Bridge_Tarjan {
 
