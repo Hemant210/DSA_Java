@@ -2,7 +2,7 @@ package Graph.Assigment_4;
 
 import java.util.ArrayList;
 
-//Articulation Point in Graph (Tarjan’s Algorithm)
+//Articulation Point in Graph(Tarjan’s Algorithm)
 //Time complexity :- O(V + E)
 public class ArticulationPoint_Tarjan {
 
