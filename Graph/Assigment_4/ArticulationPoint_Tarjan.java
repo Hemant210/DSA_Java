@@ -18,7 +18,6 @@ public class ArticulationPoint_Tarjan {
             graph[i] = new ArrayList<>();
         }
 
-        //Graph Exmaple
         //     0
         //    / \
         //   1   2
