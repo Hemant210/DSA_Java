@@ -17,6 +17,8 @@ public class ArticulationPoint_Tarjan {
         for (int i = 0; i < graph.length; i++) {
             graph[i] = new ArrayList<>();
         }
+
+        
         //     0
         //    / \
         //   1   2
