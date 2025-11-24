@@ -100,7 +100,7 @@ public class Binary_Tree {
         // System.out.println(root.data);
         // preorder(root);
         //inorder(root);
-        //Postorder(root);
+        Postorder(root);
         Levelorder(root);
     }
 }
