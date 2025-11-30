@@ -99,7 +99,7 @@ public class Binary_Tree {
         Node root = tree.buildtree(nodes);
         // System.out.println(root.data);
         // preorder(root);
-        //inorder(root);
+        inorder(root);
         Postorder(root);
         Levelorder(root);
     }
