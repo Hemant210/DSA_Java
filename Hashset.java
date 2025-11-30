@@ -11,7 +11,7 @@ public class Hashset {
         set.add(1);
         set.add(2);
         set.add(3);
-        set.add(1);//Not Insert Duplicate value
+        set.add(1);//Not Insert Duplicate
         set.add(4);
         
         //Search-contains element
