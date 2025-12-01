@@ -11,7 +11,7 @@ public class Hashmap {
         map.put("USA", 90);
         map.put("China", 150);
 
-        System.out.println(map);
+        //System.out.println(map);
 
         map.put("India", 180);
         //System.out.println(map);
