@@ -51,7 +51,7 @@ public class Graph_practice {
     }
 
     // Breadth First Search (BFS) traversal
-    //Time complexity - O(V+V)
+    // Time complexity - O(V+V)
     public static void bfs(ArrayList<Edge> graph[], int V) {
         boolean visited[] = new boolean[V]; // visited array to mark visited nodes
         Queue<Integer> q = new LinkedList<>(); // queue for BFS
@@ -76,7 +76,7 @@ public class Graph_practice {
     }
 
     // Depth First Search (DFS) traversal
-    //Time complexity - O(V+E)
+    // Time complexity - O(V+E)
     public static void DFS(ArrayList<Edge> graph[], int curr, boolean vis[]) {
         System.out.println(curr + " ");
         vis[curr] = true;
@@ -90,8 +90,8 @@ public class Graph_practice {
 
     }
 
-    //Print All Path 
-    //Time complexity - O(V^V)
+    // Print All Path
+    // Time complexity - O(V^V)
     public static void printAllpath(ArrayList<Edge> graph[], int src, int tar, String path, boolean vis[]) {
 
         // Base case: If source is the target, we have found a complete path
@@ -117,11 +117,11 @@ public class Graph_practice {
         /*
          * Graph representation (undirected):
          * 
-         *  1 ---- 3
-         * /       | \
-         * 0       |  5 -- 6
-         * \       | /
-         *  2 ---- 4
+         * 1 ---- 3
+         * / | \
+         * 0 | 5 -- 6
+         * \ | /
+         * 2 ---- 4
          * 
          */
         int V = 7; // total vertices
@@ -141,7 +141,7 @@ public class Graph_practice {
         int tar = 6;
         boolean vis[] = new boolean[V];
         vis[src] = true;
-        printAllpath(graph, src, tar, "" + src, vis); 
+        printAllpath(graph, src, tar, "" + src, vis);
         System.out.println();
     }
 }
