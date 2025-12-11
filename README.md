@@ -1,6 +1,6 @@
 # 🚀 Java DSA Journey #
 
-Welcome to my **Data Structures and Algorithms (DSA)** learning repository, where I solve and document popular DSA problems using **Java**. This repo is structured to be beginner-friendly, interview-focused, and easy to follow.
+**Data Structures and Algorithms (DSA)** learning repository, where I solve and document popular DSA problems using **Java**. This repo is structured to be beginner-friendly, interview-focused, and easy to follow.
 
 ---
 
