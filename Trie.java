@@ -5,7 +5,7 @@ public class Trie {
         Node[] children; // Array of child nodes for each character (a-z)
         boolean eow;     // Flag -> true if this node represents End Of Word
 
-        public Node() { 
+        public Node() {  
             children = new Node[26]; // only lowercase letters (a-z)
             eow = false;             // initially, no word ends here
         }
