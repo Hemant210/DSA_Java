@@ -1,6 +1,6 @@
 package Amazon;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 // class MaxMinInArray {
 //     public static ArrayList<Integer> findMinMax(int[] arr) {
