@@ -447,39 +447,39 @@ import java.util.*;
 // }
 
 //Top K Frequent Elements
-// public class Hashing_practice {
+public class Hashing_practice {
 
-//     //Function to return top K frequent elements
-//     public static List<Integer> topKFrequent(int[] nums, int k) {
-//         // Step 1: Count frequency of each number
-//         Map<Integer, Integer> map = new HashMap<>();
-//         for (int n : nums) {
-//             map.put(n, map.getOrDefault(n, 0) + 1);
-//         }
+    //Function to return top K frequent elements
+    public static List<Integer> topKFrequent(int[] nums, int k) {
+        // Step 1: Count frequency of each number
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int n : nums) {
+            map.put(n, map.getOrDefault(n, 0) + 1);
+        }
 
-//         // Step 2: Use a max-heap (priority queue) based on frequency
-//         PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
+        // Step 2: Use a max-heap (priority queue) based on frequency
+        PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
 
-//         pq.addAll(map.entrySet());
+        pq.addAll(map.entrySet());
 
-//         // Step 3: Take out top k elements
-//         List<Integer> res = new ArrayList<>();
-//         for (int i = 0; i < k; i++) {
-//             res.add(pq.poll().getKey());
-//         }
+        // Step 3: Take out top k elements
+        List<Integer> res = new ArrayList<>();
+        for (int i = 0; i < k; i++) {
+            res.add(pq.poll().getKey());
+        }
 
-//         return res;
-//     }
+        return res;
+    }
 
-//     public static void main(String[] args) {
-//         int arr[] = { 1, 1, 1, 2, 2, 3 };
-//         int k = 2;
+    public static void main(String[] args) {
+        int arr[] = { 1, 1, 1, 2, 2, 3 };
+        int k = 2;
 
-//         List<Integer> result = topKFrequent(arr, k);
-//         System.out.println("Top " + k + " frequent elements: " + result);
+        List<Integer> result = topKFrequent(arr, k);
+        System.out.println("Top " + k + " frequent elements: " + result);
 
-//     }
-// }
+    }
+}
 
 //Choose k array elements such that difference of maxium and minimum is minimized
 // public class Hashing_practice {
@@ -510,36 +510,36 @@ import java.util.*;
 
 //Check if an array is subset of another array
 //Using Hashing- O(m + n) Time and O(m) Space
-public class Hashing_practice {
-    public static boolean isSubset(int[] a, int[] b){
-         // Create a hash set and insert all elements of a
-        Set<Integer> hashSet = new HashSet<>();
-        for (int num : a) {
-            hashSet.add(num);
-        }
+// public class Hashing_practice {
+//     public static boolean isSubset(int[] a, int[] b){
+//          // Create a hash set and insert all elements of a
+//         Set<Integer> hashSet = new HashSet<>();
+//         for (int num : a) {
+//             hashSet.add(num);
+//         }
 
-        // Check each element of b in the hash set
-        for (int num : b) {
-            if (!hashSet.contains(num)) {
-                return false;
-            }
-        }
+//         // Check each element of b in the hash set
+//         for (int num : b) {
+//             if (!hashSet.contains(num)) {
+//                 return false;
+//             }
+//         }
 
-        // If all elements of b are found in the hash set
-        return true;
-    }
-    public static void main(String[] args) {
-         int[] a = { 11, 1, 13, 21, 3, 7 };
-        int[] b = { 11, 3, 7, 1 };
+//         // If all elements of b are found in the hash set
+//         return true;
+//     }
+//     public static void main(String[] args) {
+//          int[] a = { 11, 1, 13, 21, 3, 7 };
+//         int[] b = { 11, 3, 7, 1 };
 
-        if (isSubset(a, b)) {
-            System.out.println("true");
-        }
-        else {
-            System.out.println("false");
-        }
-    }
-}
+//         if (isSubset(a, b)) {
+//             System.out.println("true");
+//         }
+//         else {
+//             System.out.println("false");
+//         }
+//     }
+// }
 
 //Using Nested Loops - O(m*n) Time and O(1) Space
 // public class Hashing_practice {

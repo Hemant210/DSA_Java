@@ -28,15 +28,12 @@ public class MergeTwoSortedList {
         }
     }
 
-    // 🔹 PRINT LINKED LIST
     public static void printList(ListNode head) {
         while (head != null) {
             System.out.print(head.val + " -> ");
             head = head.next;
         }
     }
-
-    // 🔹 MAIN METHOD (START POINT)
     public static void main(String[] args) {
 
         // list1: 1 -> 3 -> 5
@@ -44,17 +41,14 @@ public class MergeTwoSortedList {
         list1.next = new ListNode(3);
         list1.next.next = new ListNode(5);
 
-        // list2: 2 -> 4 -> 6
         ListNode list2 = new ListNode(2);
         list2.next = new ListNode(4);
         list2.next.next = new ListNode(6);
 
         MergeTwoSortedList obj = new MergeTwoSortedList();
 
-        // merge lists
         ListNode mergedHead = obj.mergeTwoLists(list1, list2);
 
-        // print result
         printList(mergedHead);
     }
 }
