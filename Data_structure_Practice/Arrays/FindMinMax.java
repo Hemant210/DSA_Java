@@ -3,6 +3,8 @@ package Data_structure_Practice.Arrays;
 import java.util.ArrayList;
 
 public class FindMinMax {
+
+    // O(n) Time and O(1) Space
     public static ArrayList<Integer> findminimaxi(int[] arr){
         int mini = Integer.MAX_VALUE;
         int maxi = Integer.MIN_VALUE;
