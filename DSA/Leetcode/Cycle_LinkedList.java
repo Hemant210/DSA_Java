@@ -1,5 +1,5 @@
 //141. Linked List Cycle
-package Leetcode;
+package DSA.Leetcode;
 
 public class Cycle_LinkedList {
     static class ListNode {

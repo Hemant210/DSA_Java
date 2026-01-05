@@ -1,4 +1,4 @@
-package Graph;
+package DSA.Graph;
 import java.util.ArrayList;
 
 public class Graph {

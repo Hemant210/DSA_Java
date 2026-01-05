@@ -1,4 +1,4 @@
-package Graph.Assigment_2;
+package DSA.Graph.Assigment_2;
 
 
 import java.util.ArrayList;

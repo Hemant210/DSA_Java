@@ -1,3 +1,4 @@
+package DSA;
 // public class Selection_sort {
 
 //     public static void printArray(int arr[]) {

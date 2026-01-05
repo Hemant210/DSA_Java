@@ -1,4 +1,4 @@
-package Leetcode;
+package DSA.Leetcode;
 
 //572. Subtree of Another Tree
 public class Subtree_tree {

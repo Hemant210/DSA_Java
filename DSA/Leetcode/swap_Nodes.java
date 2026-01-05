@@ -1,4 +1,4 @@
-package Leetcode;
+package DSA.Leetcode;
 
 //24. Swap Nodes in Pairs
 //swap every two adjacent nodes and return its head. 

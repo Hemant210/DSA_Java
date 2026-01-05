@@ -1,4 +1,4 @@
-package Leetcode;
+package DSA.Leetcode;
 
 //We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
 import java.util.*;

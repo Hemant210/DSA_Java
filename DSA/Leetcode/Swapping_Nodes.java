@@ -1,4 +1,4 @@
-package Leetcode;
+package DSA.Leetcode;
 
 //1721. Swapping Nodes in a Linked List
 public class Swapping_Nodes {

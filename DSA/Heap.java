@@ -1,3 +1,4 @@
+package DSA;
 //Heap Sort
 //Sort the array by placing largest element at end of unsorted array.
 public class Heap {

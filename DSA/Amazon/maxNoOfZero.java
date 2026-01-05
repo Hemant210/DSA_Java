@@ -1,4 +1,4 @@
-package Amazon;
+package DSA.Amazon;
 
 public class maxNoOfZero {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Amazon;
+package DSA.Amazon;
 
 import java.util.HashSet;
 import java.util.Set;

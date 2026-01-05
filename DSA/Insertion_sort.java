@@ -1,3 +1,4 @@
+package DSA;
     public class Insertion_sort {
 
     public static void printArray(int arr[]) {

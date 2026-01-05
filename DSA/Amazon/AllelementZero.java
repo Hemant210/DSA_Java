@@ -1,4 +1,4 @@
-package Amazon;
+package DSA.Amazon;
 
 public class AllelementZero {
     public static int minOperationsToMakeAllElemsZero(int[] nums) {

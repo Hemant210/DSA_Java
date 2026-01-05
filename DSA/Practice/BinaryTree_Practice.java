@@ -1,4 +1,4 @@
-package Practice;
+package DSA.Practice;
 
 //Count of Nodes
 public class BinaryTree_Practice {

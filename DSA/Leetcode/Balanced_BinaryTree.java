@@ -1,4 +1,4 @@
-package Leetcode;
+package DSA.Leetcode;
 
 //110. Balanced Binary Tree
 public class Balanced_BinaryTree {

@@ -1,5 +1,5 @@
     //150. Evaluate Reverse Polish Notation
-    package Leetcode;
+    package DSA.Leetcode;
 
     import java.util.Stack;
 

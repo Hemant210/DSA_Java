@@ -1,4 +1,4 @@
-package Leetcode;
+package DSA.Leetcode;
 
 public class Add_Linklist {
     // Definition for singly-linked list.

@@ -1,4 +1,4 @@
-package Leetcode;
+package DSA.Leetcode;
 
 //236. Lowest Common Ancestor of a Binary Tree
 public class Lowest_Ancestor {

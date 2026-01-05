@@ -1,4 +1,4 @@
-package Practice;
+package DSA.Practice;
 
 import java.util.Stack;
 

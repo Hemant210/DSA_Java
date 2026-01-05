@@ -1,4 +1,4 @@
-package Amazon;
+package DSA.Amazon;
 
 // Node structure
 class ListNode {

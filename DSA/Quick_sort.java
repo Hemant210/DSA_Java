@@ -1,3 +1,4 @@
+package DSA;
 public class Quick_sort {
     public static int partication(int arr[], int low, int high) {
         int pivot = arr[high];

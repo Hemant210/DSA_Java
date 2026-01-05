@@ -1,4 +1,4 @@
-package Leetcode;
+package DSA.Leetcode;
 
 // Java Program to find the next permutation of a number array
 public class Permutation {

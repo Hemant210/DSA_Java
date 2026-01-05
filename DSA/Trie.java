@@ -1,3 +1,4 @@
+package DSA;
 public class Trie {     
 
     // Node class represents each character node in Trie

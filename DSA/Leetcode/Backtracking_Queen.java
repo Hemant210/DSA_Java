@@ -1,4 +1,4 @@
-package Leetcode;
+package DSA.Leetcode;
 
 //Time complexity = O(n*n)
 //51. N-Queens

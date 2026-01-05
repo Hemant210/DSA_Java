@@ -1,4 +1,4 @@
-package Leetcode;
+package DSA.Leetcode;
 
 // 37. Sudoku Solver
 public class Sudoku_solver {

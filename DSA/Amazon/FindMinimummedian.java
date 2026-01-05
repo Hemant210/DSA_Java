@@ -1,4 +1,4 @@
-package Amazon;
+package DSA.Amazon;
 
 import java.util.ArrayList;
 import java.util.List;

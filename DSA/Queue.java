@@ -1,3 +1,4 @@
+package DSA;
 // Circular queue using array
 // public class Queue {
 // // Inner static class implementing a queue using array

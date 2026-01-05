@@ -1,3 +1,4 @@
+package DSA;
 //Print BST TREE
 public class BST {
     // Node class represents each node in the BST

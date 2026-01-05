@@ -1,4 +1,4 @@
-package Leetcode;
+package DSA.Leetcode;
 
 //88. Merge Sorted Array
 // public class merge_sorted {

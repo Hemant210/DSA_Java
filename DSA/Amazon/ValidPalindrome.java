@@ -1,4 +1,4 @@
-package Amazon;
+package DSA.Amazon;
 
 public class ValidPalindrome {
     public static boolean isPalinSent(String s) {

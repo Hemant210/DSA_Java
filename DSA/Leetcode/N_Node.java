@@ -1,4 +1,4 @@
-package Leetcode;
+package DSA.Leetcode;
 
 //19. Remove Nth Node From End of List
 // public class N_Node {

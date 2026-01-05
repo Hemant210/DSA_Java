@@ -1,5 +1,5 @@
 //234. Palindrome Linked List
-package Leetcode;
+package DSA.Leetcode;
 
 public class Palindrome_LinkedList {
 

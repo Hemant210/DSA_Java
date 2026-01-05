@@ -1,4 +1,4 @@
-package Practice;
+package DSA.Practice;
 
 // public class Linklist_practice {
 //     Node head;

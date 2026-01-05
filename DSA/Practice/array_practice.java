@@ -1,4 +1,4 @@
-package Practice;
+package DSA.Practice;
 // public class array_practice {
 
 //     public int majorityElement(int[] nums) {
