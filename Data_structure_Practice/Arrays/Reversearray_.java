@@ -16,6 +16,7 @@ import java.util.List;
 //         }
 //     }
 
+// Time Complexity: O(n) & O(1) Space
 //     public static void main(String[] args) {
 //         int[] arr = { 1, 4, 3, 2, 6, 5 };
 
@@ -27,6 +28,7 @@ import java.util.List;
 // }
 
 public class Reversearray_ {
+    //Using Inbuilt Methods - O(n) Time and O(1) Space
     public static void reversearr(List<Integer> arr){
         Collections.reverse(arr);
     }
