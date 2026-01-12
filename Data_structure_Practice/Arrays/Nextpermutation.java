@@ -10,6 +10,7 @@ public class Nextpermutation {
         nums[j] = temp;
     }
 
+   // Time Complexity: O(n) & O(1) Space
     public static void nextPermutation(int[] nums) {
         int n = nums.length;
         int pivot = -1;
