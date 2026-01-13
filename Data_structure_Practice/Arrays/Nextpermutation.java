@@ -10,14 +10,14 @@ public class Nextpermutation {
         nums[j] = temp;
     }
 
-   // Time Complexity: O(n) & O(1) Space
+    // Time Complexity: O(n) & O(1) Space
     public static void nextPermutation(int[] nums) {
         int n = nums.length;
         int pivot = -1;
 
         // STEP 1: find pivot
         for (int i = n - 2; i >= 0; i--) {
-            if (nums[i] < nums[i + 1]) {   // FIXED
+            if (nums[i] < nums[i + 1]) { // FIXED
                 pivot = i;
                 break;
             }
@@ -47,7 +47,7 @@ public class Nextpermutation {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3};
+        int[] arr = { 1, 2, 3 };
 
         nextPermutation(arr);
 
