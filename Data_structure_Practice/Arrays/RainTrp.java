@@ -12,7 +12,7 @@ public class RainTrp {
             rightmax = Math.max(rightmax, nums[r]);
 
             if (leftmax < rightmax) {
-                ans += leftmax - nums[l];
+                  ans += leftmax - nums[l];
                 l++;
             } else {
                 ans += rightmax - nums[r];
