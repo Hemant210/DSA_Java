@@ -1,6 +1,8 @@
 package Data_structure_Practice.Arrays;
 
+//Find minimum number of merge operations to make an array palindrome
 public class findMin {
+    //Time Complexity: O(n) & Space: O(1)
     public static int findminoperation(int[] arr){
         int count = 0;
         int left = 0;
