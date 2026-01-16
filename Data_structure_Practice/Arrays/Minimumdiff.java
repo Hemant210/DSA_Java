@@ -10,7 +10,7 @@ public class Minimumdiff {
         int n = arr.length;
 
         Arrays.sort(arr);
-
+        
         int mindiff = Integer.MAX_VALUE;
 
         for (int i = 0; i + m - 1 < n; i++) {
