@@ -2,18 +2,37 @@ package Data_structure_Practice.Strings;
 
 public class Validpalindrome {
     // Time complexity :- O(n) and space :- O(1)
-    public static boolean isPalindrome(String s) {
-        s = s.toLowerCase().replaceAll("[^a-z0-9]", "");
-        int left = 0;
-        int right = s.length() - 1;
+    public static boolean alphanumeric(char ch) {
+        if ((ch >= '0' & ch <= '9') ||
+                (Character.toLowerCase(ch) >= 'a' && Character.toLowerCase(ch) <= 'z')) {
+            return true;
+        }
 
-        while (left < right) {
-            if (s.charAt(right) != s.charAt(left)) {
+        return false;
+    }
+
+    public static boolean isPalindrome(String s) {
+        int st = 0;
+        int end = s.length() - 1;
+
+        while (st < end) {
+            if (!alphanumeric(s.charAt(st))) {
+                st++;
+                continue;
+            }
+
+            if (!alphanumeric(s.charAt(end))) {
+                end--;
+                continue;
+            }
+
+            if (Character.toLowerCase(s.charAt(st)) != Character.toLowerCase(s.charAt(end))) {
                 return false;
             }
 
-            left++;
-            right--;
+            st++;
+            end--;
+
         }
 
         return true;
@@ -22,17 +41,5 @@ public class Validpalindrome {
     public static void main(String[] args) {
         String s = "A man, a plan, a canal: Panama";
         System.out.println(isPalindrome(s));
-    }
-}
-
-class Solution {
-    public int romanToInt(String s) {
-        int I = 1;
-int V    =         5;
-int X  =           10;
-int L      =      50;
-int C      =      100;
-int D      =      500;
-int M      =      1000;
     }
 }
