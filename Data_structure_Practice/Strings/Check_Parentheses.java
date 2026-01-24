@@ -3,6 +3,7 @@ package Data_structure_Practice.Strings;
 import java.util.Stack;
 
 public class Check_Parentheses {
+    //Time complexity :- O(n) & space :- O(n)
     public static boolean isValid(String s) {
         Stack<Character> st = new Stack();
         
