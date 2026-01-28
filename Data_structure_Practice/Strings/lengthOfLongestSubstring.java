@@ -1,7 +1,7 @@
 package Data_structure_Practice.Strings;
 
 public class lengthOfLongestSubstring {
-    // Time complexity : O(2) & Space complexity: O(1)
+    // Time complexity : O(n2) & Space complexity: O(1)
     public static int lengthLongestSubstring(String s) {
         int n = s.length();
         int max = 0;
