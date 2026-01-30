@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 //Print all the duplicate characters in a string
 public class printDuplicates {
-    //Time complexity :- O(n*log(n)) and Space :- O(1)
+    //Time complexity :- O(n*log(n)) & Space :- O(1)
     public static void printduplicate(String s) {
         char[] arr = s.toCharArray();
         Arrays.sort(arr);
