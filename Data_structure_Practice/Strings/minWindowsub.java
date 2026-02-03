@@ -1,6 +1,7 @@
 package Data_structure_Practice.Strings;
 
 public class minWindowsub {
+    //Time complexity : O(n^3) & Space complexity : O(1)
     public static boolean MinimumWindowString(String s, String t) {
         StringBuilder sb = new StringBuilder(s);
 
