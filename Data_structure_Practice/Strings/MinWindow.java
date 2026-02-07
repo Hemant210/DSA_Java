@@ -8,7 +8,6 @@ public class MinWindow {
 
         int[] freq = new int[128]; // ASCII characters
 
-        // Store frequency of characters in t
         for (char c : t.toCharArray()) {
             freq[c]++;
         }
