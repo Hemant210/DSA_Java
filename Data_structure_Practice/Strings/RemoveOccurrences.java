@@ -16,6 +16,5 @@ public class RemoveOccurrences {
 
         String result = removeOccurrences(s, part);
         System.out.println(result);
-        
     }
 }
