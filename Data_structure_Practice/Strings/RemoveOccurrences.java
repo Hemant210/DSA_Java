@@ -11,6 +11,7 @@ public class RemoveOccurrences {
     }
 
     public static void main(String[] args) {
+       
         String s = "daabcbaabcbc";
         String part = "abc";
 
