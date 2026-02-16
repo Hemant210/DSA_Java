@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class KthsmallestElement {
 
-    // Time Complexity: O(n) & O(1) Space
+    // Time Complexity: O(n) and O(1) Space
     public static int ksmallelement(int[] nums, int target) {
         int n = nums.length;
 
