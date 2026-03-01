@@ -2,7 +2,7 @@ package Data_structure_Practice.Binary_Search;
 
 public class Single_element {
     //Naive Approch
-    // Time Complexity :- O(n)& Space Complexity : O(1)
+    // Time Complexity :- O(n) & Space Complexity : O(1)
     public static int Find_Element(int[] nums) {
         int ans = 0;
 
