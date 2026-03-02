@@ -20,7 +20,7 @@ public class Book_allocation {
         return students > m ? false : true;
     }
 
-    //Time Complexity :- O(n * log(sum)) & Space Complexity : O(1)
+    //Time Complexity :- O(n*log(sum)) & Space Complexity : O(1)
     public static int allocatebook(int[]arr , int n, int m) {
         if (m > n) {
             return -1;
