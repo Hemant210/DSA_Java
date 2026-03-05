@@ -11,8 +11,8 @@ public class Painter_partition {
             maxVal = Math.max(maxVal, arr[i]);
         }
 
-        int st = maxVal; // minimum 
-        int end = sum; // maximum 
+        int st = maxVal; 
+        int end = sum; 
         int ans = -1;
 
         while (st <= end) {
