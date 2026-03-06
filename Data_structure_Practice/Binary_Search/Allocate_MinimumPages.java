@@ -95,7 +95,7 @@ public class Allocate_MinimumPages {
         int[] arr = {12, 34, 67, 90};
         int k = 2;
 
-        System.out.println("Approach Linear Scan :- " + Find_pages(arr, k));
+        //System.out.println("Approach Linear Scan :- " + Find_pages(arr, k));
         System.out.println("Approach Binary Scan :- " + FindPages(arr, k));
     }
 }
