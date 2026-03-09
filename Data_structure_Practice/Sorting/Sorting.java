@@ -41,7 +41,7 @@ public class Sorting {
     }
 
     // Insertion Sort
-    // Time Complexity :- O(n^2) & Space Complexity : O(1)
+    // Time Complexity :- O(n) & Space Complexity : O(1)
     public static void insertion_sort(int[] arr, int n){
         for(int i = 1; i < n; i++){
             int curr = arr[i];
@@ -69,8 +69,8 @@ public class Sorting {
         int a[] = { 4, 1, 5, 2, 3 };
         int n = a.length;
 
-        bubbleSort(a, n);
-        selectionsort(a, n);
+        //bubbleSort(a, n);
+        //selectionsort(a, n);
         insertion_sort(a, n);
 
         System.out.println("Sorted Array :- ");
