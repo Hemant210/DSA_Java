@@ -69,8 +69,8 @@ public class Sorting {
         int a[] = { 4, 1, 5, 2, 3 };
         int n = a.length;
 
-        //bubbleSort(a, n);
-        //selectionsort(a, n);
+        bubbleSort(a, n);
+        selectionsort(a, n);
         insertion_sort(a, n);
 
         System.out.println("Sorted Array :- ");
