@@ -17,7 +17,7 @@ public class Sorting {
                 }
             }
 
-            if (!isSwap) { // Array Alredy sorted
+            if (!isSwap) { // Check Array Alredy sorted
                 return;
             }
         }
