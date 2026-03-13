@@ -30,6 +30,7 @@ public class Sort_Colors {
         }
     }
 
+    //Dutch National Flag algorithm
     // Time Complexity: O(n) & Space Complexity: O(1)
     public static void sort_color(int[] nums) {
         int n = nums.length;
@@ -62,7 +63,7 @@ public class Sort_Colors {
         //sortColors(nums);
 
         sort_color(nums);
-        
+
         for (int i = 0; i < nums.length; i++) {
             System.out.println(nums[i] + " ");
         }
