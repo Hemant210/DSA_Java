@@ -1,7 +1,8 @@
 package Data_structure_Practice.Sorting;
 
 public class Serching_element {
-    public static int search(int arr[], int n,int x, int k) {
+    // Time Complexity: O(n) & Space Complexity: O(1)
+    public static int search(int arr[], int n, int x, int k) {
         int i = 0;
 
         while (i < n) {
@@ -9,6 +10,9 @@ public class Serching_element {
             if (arr[i] == x)
                 return i;
 
+            // Jump the difference between current array
+            // element and x divided by k We use max here to
+            // make sure that i moves at-least one step ahead.
             i = i + Math.max(1, Math.abs(arr[i]
                     - x) / k);
         }
