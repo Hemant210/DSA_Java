@@ -3,8 +3,8 @@ package Data_structure_Practice.Sorting;
 import java.util.Arrays;
 
 public class Permutation_sum {
-    //Time Complexity :- O(n log(n)) & Space Complexity : O(1)     
-    public static boolean isPossible(int[] a, int[] b, int target) {
+        //Time Complexity :- O(n log(n)) & Space Complexity : O(1)     
+        public static boolean isPossible(int[] a, int[] b, int target) {
         Arrays.sort(a);
         Arrays.sort(b);
 
