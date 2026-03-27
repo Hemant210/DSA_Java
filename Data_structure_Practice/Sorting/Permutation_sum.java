@@ -19,7 +19,6 @@ public class Permutation_sum {
                 return true;
             }
         }
-
         return false;
     }
 
