@@ -9,7 +9,7 @@ public class counting_sort {
 
         int n = arr.length;
 
-        // Find Maximum Value
+        //Find Maximum Value
         int maxVal = arr[0];
 
         for (int i = 1; i < n; i++) {
