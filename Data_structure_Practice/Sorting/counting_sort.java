@@ -1,7 +1,6 @@
 package Data_structure_Practice.Sorting;
 
 public class counting_sort {
-    
     // Time Complexity :- O(n + k) & Space Complexity : O(n + k)
     public static int[] countsort(int[] arr) {
         if (arr.length == 0) {
