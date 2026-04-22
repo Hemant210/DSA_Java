@@ -19,7 +19,6 @@ public class counting_sort {
         }
 
         int[] cntArr = new int[maxVal + 1];
-
         // Count frequency of each element
         for (int i = 0; i < n; i++) {
             cntArr[arr[i]]++;
