@@ -44,7 +44,7 @@ public class Ceiling_element {
         int[] arr = { 1, 2, 8, 10, 10, 12, 19 };
         int x = 3;
 
-        System.out.println(ceil_search(arr, x));
+        //System.out.println(ceil_search(arr, x));
         System.out.println(ceilsearch(arr, x));
     }
 }
