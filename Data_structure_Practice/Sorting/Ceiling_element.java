@@ -39,7 +39,6 @@ public class Ceiling_element {
 
         return res;
     }
-    
     public static void main(String[] args) {
         int[] arr = { 1, 2, 8, 10, 10, 12, 19 };
         int x = 3;
