@@ -22,7 +22,7 @@ public class Ceiling_element {
     }
     
     // Binary Search Approch
-    // Time Complexity: O(Log n) & Space Complexity: O(1)
+    // Time Complexity: O(Log n) and Space Complexity: O(1)
     public static int ceil_search(int[] arr, int x){
         int start = 0, end = arr.length - 1, res = -1;
 
