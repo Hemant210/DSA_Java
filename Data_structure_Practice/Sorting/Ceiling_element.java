@@ -21,7 +21,7 @@ public class Ceiling_element {
         return -1;
     }
     
-    // Binary Search Approch
+    // Binary Search Approch Better
     // Time Complexity: O(Log n) & Space Complexity: O(1)
     public static int ceil_search(int[] arr, int x){
         int start = 0, end = arr.length - 1, res = -1;
