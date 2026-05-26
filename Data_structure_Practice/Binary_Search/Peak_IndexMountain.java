@@ -40,6 +40,6 @@ public class Peak_IndexMountain {
     public static void main(String[] args) {
        int[] arr = {0,1,0};
        System.out.println(peakIndexInMountainArray(arr));
-       System.out.println(peakArray(arr));
+       //System.out.println(peakArray(arr));
     }
 }
