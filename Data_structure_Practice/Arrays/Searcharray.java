@@ -64,7 +64,7 @@ public class Searcharray {
         int[] arr = { -1, 0, 3, 5, 9, 12 };
         int target = 0;
         //System.out.println(Find_rotedarray(arr, 9));
-        //System.out.println(Find_Element(arr, 12));
+        System.out.println(Find_Element(arr, 12));
         System.out.println(Recursion_binarysearch(arr, target, 0, arr.length - 1));
     }
 }
