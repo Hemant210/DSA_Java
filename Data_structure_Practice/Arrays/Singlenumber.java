@@ -11,7 +11,7 @@ public class Singlenumber {
         return ans;
     }
     public static void main(String[] args) {
-        int[] arr = {4,1,2,1,2};
+        int[] arr = {4,1,2,1,2,6};
         System.out.println(Findsinglenumber(arr));
     }
 }
