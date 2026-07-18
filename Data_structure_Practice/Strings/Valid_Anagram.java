@@ -1,6 +1,5 @@
 package Data_structure_Practice.Strings;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Valid_Anagram {
