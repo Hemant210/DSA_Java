@@ -38,8 +38,31 @@ public class Validpalindrome {
         return true;
     }
 
+    public static boolean check_palindrone(String s){
+        int n = s.length();
+
+        int low = 0;
+        int high = n - 1;
+
+        while(low < high){
+            if(!Character.isLetterOrDigit(s.charAt(low))){
+                low++;
+            } else if(!Character.isLetterOrDigit(s.charAt(high))){
+                high--;
+            } else if(Character.LowerCase(s.charAt(low)) == Character.LowerCase(s.charAt(high))){
+                low++;
+                high--;
+            } else {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public static void main(String[] args) {
         String s = "A man, a plan, a canal: Panama";
         System.out.println(isPalindrome(s));
+        System.out.println(check_palindrone(s));
     }
 }
