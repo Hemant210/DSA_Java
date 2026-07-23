@@ -49,7 +49,7 @@ public class Validpalindrome {
                 low++;
             } else if(!Character.isLetterOrDigit(s.charAt(high))){
                 high--;
-            } else if(Character.LowerCase(s.charAt(low)) == Character.LowerCase(s.charAt(high))){
+            } else if(Character.isLowerCase(s.charAt(low)) == Character.isLowerCase(s.charAt(high))){
                 low++;
                 high--;
             } else {

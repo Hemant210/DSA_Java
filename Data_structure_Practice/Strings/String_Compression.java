@@ -1,6 +1,6 @@
 package Data_structure_Practice.Strings;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 
 public class String_Compression {
     public static int compress(char[] chars) {
