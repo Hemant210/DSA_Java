@@ -1,9 +1,9 @@
 package Data_structure_Practice.Binary_Search;
 
 public class Allocate_MinimumPages {
-    
-    //Approach - Linear Scan 
-    //Time Complexity :- O(N*totalSum-maxValue+1)) & Space Complexity : O(1)    
+
+    // Approach - Linear Scan
+    // Time Complexity :- O(N*totalSum-maxValue+1)) & Space Complexity : O(1)
     public static boolean isPossible(int arr[], int k, int limit) {
         int students = 1, pages = 0;
 
@@ -41,14 +41,13 @@ public class Allocate_MinimumPages {
         return -1;
     }
 
-
-    //Approach - Binary Search
-    //Time Complexity :- O(N*log(totalSum-maxValue)) & Space Complexity : O(1)    
-    public static boolean isAlloctionPossible(int[] pages, int k, int maxpagesallowed){
+    // Approach - Binary Search
+    // Time Complexity :- O(N*log(totalSum-maxValue)) & Space Complexity : O(1)
+    public static boolean isAlloctionPossible(int[] pages, int k, int maxpagesallowed) {
         int currentpages = pages[0];
         int requiredStudents = 1;
 
-        for(int i =1; i < pages.length; i++){
+        for (int i = 1; i < pages.length; i++) {
             currentpages += pages[i];
 
             if (currentpages > maxpagesallowed) {
@@ -59,18 +58,18 @@ public class Allocate_MinimumPages {
 
         return requiredStudents <= k;
     }
-    
 
-    public static int FindPages(int[] pages, int k){
+    public static int FindPages(int[] pages, int k) {
         int n = pages.length;
-        if(k > n) return -1;
+        if (k > n)
+            return -1;
 
         int maxSingleBook = pages[0];
         int totalPages = pages[0];
 
-        for(int i = 1; i < n; i++){
-                    maxSingleBook = Math.max(maxSingleBook, pages[i]);
-           totalPages += pages[i];
+        for (int i = 1; i < n; i++) {
+            maxSingleBook = Math.max(maxSingleBook, pages[i]);
+            totalPages += pages[i];
         }
 
         int low = maxSingleBook;
@@ -78,7 +77,7 @@ public class Allocate_MinimumPages {
         int answer = 0;
 
         while (low <= high) {
-            int mid = low + (high - low)/2;
+            int mid = low + (high - low) / 2;
 
             if (isAlloctionPossible(pages, k, mid)) {
                 answer = mid;
@@ -91,11 +90,60 @@ public class Allocate_MinimumPages {
         return answer;
 
     }
+
+
+    public static int countpages(int[] pages, int k){
+        int n = pages.length;
+
+        if(k > n) return -1;
+
+        int maxsinglebook = pages[0];
+        int totalpages = pages[0];
+        
+        for(int i = 1; i < n; i++){
+            maxsinglebook = Math.max(maxsinglebook, pages[i]);
+            totalpages += pages[i];
+        }
+
+        int low = maxsinglebook;
+        int high = totalpages;
+        int ans = 0;
+
+        while (low <= high) {
+            int mid = low + (high - low)/2;
+
+            if (isAllocation_possible(pages, k, mid)) {
+                ans = mid;
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+
+        return ans;
+    }
+
+    private static boolean isAllocation_possible(int[] pages, int k, int maxPagesAllowed) {
+        int currentpages = 0;
+        int requirestudent = 1;
+
+        for(int i = 0; i < pages.length; i++){
+            currentpages += pages[i];
+
+            if (currentpages > maxPagesAllowed) {
+                requirestudent++;
+                currentpages = pages[i];
+            }
+        }
+
+        return requirestudent <= k;
+    }
+
     public static void main(String[] args) {
-        int[] arr = {12, 34, 67, 90};
+        int[] arr = { 12, 34, 67, 90 };
         int k = 2;
 
-        //System.out.println("Approach Linear Scan :- " + Find_pages(arr, k));
-        System.out.println("Approach Binary Scan :- " + FindPages(arr, k));
+        // System.out.println("Approach Linear Scan :- " + Find_pages(arr, k));
+        System.out.println("Approach Binary Scan :- " + countpages(arr, k));
     }
 }

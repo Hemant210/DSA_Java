@@ -1,7 +1,7 @@
 package Data_structure_Practice.Binary_Search;
 
 public class Painter_partition {
-    //Time Complexity O(n log(sum)) & Space Complexity O(1)
+    // Time Complexity O(n log(sum)) & Space Complexity O(1)
     public static int minTimeToPaint(int[] arr, int n, int m) {
         int sum = 0;
         int maxVal = Integer.MIN_VALUE;
@@ -11,17 +11,17 @@ public class Painter_partition {
             maxVal = Math.max(maxVal, arr[i]);
         }
 
-        int st = maxVal; 
-        int end = sum; 
+        int st = maxVal;
+        int end = sum;
         int ans = -1;
 
         while (st <= end) {
             int mid = st + (end - st) / 2;
 
-            if (isPossible(arr, n, m, mid)) { 
+            if (isPossible(arr, n, m, mid)) {
                 ans = mid;
                 end = mid - 1;
-            } else { 
+            } else {
                 st = mid + 1;
             }
         }
