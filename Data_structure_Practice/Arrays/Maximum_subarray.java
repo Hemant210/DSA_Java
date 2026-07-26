@@ -1,27 +1,24 @@
 package Data_structure_Practice.Arrays;
 
 public class Maximum_subarray {
-    public static int maxiarr(int [] arr){
-        int sum = 0;
-        int maxi = Integer.MIN_VALUE;
+    public static int maxiarr(int [] nums){
+        int n = nums.length;
+        int maxsum = Integer.MIN_VALUE;
 
-        int i = 0,j = 0;
-
-        while (j < arr.length) {
-            if (j < 0 && arr[j] >= sum) {
-                sum = 0;
-                i = j;
+        for(int i = 0; i < n; i++){
+            int currsum = 0;
+            
+            for(int j = i; j < n; j++){
+                currsum += nums[j];
+                maxsum = Math.max(maxsum, currsum);
             }
-
-            sum += arr[j];
-            maxi = Math.max(maxi, sum);
-            j++;
         }
 
-        return maxi;
+        return maxsum;
+
     }
     public static void main(String[] args) {
-        int[] arr = {5,4,-1,7,8};
+        int[] arr = {-2,1,-3,4,-1,2,1,-5,4};
         System.out.println(maxiarr(arr));
     }
 }
