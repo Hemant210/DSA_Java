@@ -71,24 +71,24 @@ package DSA;
 // }
 
 //Fibonnacci sequence
-// public class Recursion {
-//     public static void Fibonnacci(int a, int b, int n){
-//         if(n == 0){
-//             return;
-//         }
-//         int c = a + b;
-//         System.out.println(c);
-//         Fibonnacci(b, c, n - 1);
-//     }
+public class Recursion {
+    public static void Fibonnacci(int a, int b, int n){
+        if(n == 0){
+            return;
+        }
+        int c = a + b;
+        System.out.println(c);
+        Fibonnacci(b, c, n - 1);
+    }
 
-//     public static void main(String[] args) {
-//         int a = 0, b = 1;
-//         System.out.println(a);
-//         System.out.println(b);
-//         int n = 7;
-//         Fibonnacci(a, b, n - 2);
-//     }
-// }
+    public static void main(String[] args) {
+        int a = 0, b = 1;
+        // System.out.println(a);
+        // System.out.println(b);
+         int n = 7;
+        Fibonnacci(a, b, n - 2);
+    }
+}
 
 //x^n (stack heigth n)
 // public class Recursion {
@@ -131,17 +131,17 @@ package DSA;
 // }
 
 // Function to check sum 
-public class Recursion {
+// public class Recursion {
 
-    public static int Sum_number(int n) {
-        if (n == 0)
-            return 0;
-        return (n % 10 + Sum_number(n / 10));
+//     public static int Sum_number(int n) {
+//         if (n == 0)
+//             return 0;
+//         return (n % 10 + Sum_number(n / 10));
 
-    }
+//     }
 
-    public static void main(String[] args) {
-        int num = 13654;
-        System.out.println("Total sum of all number :- " + Sum_number(num));
-    }
-}
+//     public static void main(String[] args) {
+//         int num = 13654;
+//         System.out.println("Total sum of all number :- " + Sum_number(num));
+//     }
+// }

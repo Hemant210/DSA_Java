@@ -1,9 +1,6 @@
 package DSA.Practice;
 
-// import java.util.ArrayList;
 // // import java.util.*;
-// // import java.util.HashSet;
-// import java.util.Scanner;
 
 //Tower of Hanoi
 //Time complexity
@@ -25,21 +22,21 @@ package DSA.Practice;
 
 //Reverse string
 //Time complexity  = O(n)
-// public class Recursion_practice {
-//     public static void print_rev(String s, int idx){
-//         if(idx == 0){
-//             System.out.println(s.charAt(idx));
-//             return;
-//         }
-//         System.out.print(s.charAt(idx));
-//         print_rev(s, idx-1);
-//     }
+public class Recursion_practice {
+    public static void print_rev(String s, int idx){
+        if(idx == 0){
+            System.out.println(s.charAt(idx));
+            return;
+        }
+        System.out.print(s.charAt(idx));
+        print_rev(s, idx-1);
+    }
 
-//      public static void main(String[] args) {
-//         String s = "abcd";
-//         print_rev(s, s.length()-1);
-//      }
-// }
+     public static void main(String[] args) {
+        String s = "abcd";
+        print_rev(s, s.length()-1);
+     }
+}
 
 //1st & last occurance of an element in string
 // public class Recursion_practice {
@@ -386,27 +383,27 @@ package DSA.Practice;
 // }
 
 //You are given a string S consisting of a list of words; the string contains lowercase alphabets and some special symbols such as (*, $, #). Now, our task is to make the string good, and this is done by removing all the special characters from the sentence. For this, we have to perform two operations-
-public class Recursion_practice {
-    public static String makeGoodString(String s) {
-        if (s.isEmpty()) {
-            return "";
-        }
+// public class Recursion_practice {
+//     public static String makeGoodString(String s) {
+//         if (s.isEmpty()) {
+//             return "";
+//         }
 
-        char c = s.charAt(0);
+//         char c = s.charAt(0);
 
-        if (c == '*' || c == '$' || c == '#') {
-            if (s.length() > 1 && Character.isLowerCase(s.charAt(1))) {
-                return makeGoodString(s.substring(2));
-            } else {
-                return makeGoodString(s.substring(1));
-            }
-        } else {
-            return c + makeGoodString(s.substring(1));
-        }
-    }
+//         if (c == '*' || c == '$' || c == '#') {
+//             if (s.length() > 1 && Character.isLowerCase(s.charAt(1))) {
+//                 return makeGoodString(s.substring(2));
+//             } else {
+//                 return makeGoodString(s.substring(1));
+//             }
+//         } else {
+//             return c + makeGoodString(s.substring(1));
+//         }
+//     }
 
-    public static void main(String[] args) {
-        String s = "thw$ g##bjhdwd vdg*gh$vvdd#bdudhc";
-        System.out.println(makeGoodString(s));
-    }
-}
+//     public static void main(String[] args) {
+//         String s = "thw$ g##bjhdwd vdg*gh$vvdd#bdudhc";
+//         System.out.println(makeGoodString(s));
+//     }
+// }
