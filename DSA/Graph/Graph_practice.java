@@ -116,14 +116,14 @@ public class Graph_practice {
     public static void main(String args[]) {
         /*
          * Graph representation (undirected):
-         * 
-         * 1 ---- 3
-         * / | \
-         * 0 | 5 -- 6
-         * \ | /
-         * 2 ---- 4
-         * 
-         */
+             1
+            / \
+           0   3
+            \ / \
+             2   5 ---- 6
+              \ /
+               4
+        */
         int V = 7; // total vertices
         ArrayList<Edge> graph[] = new ArrayList[V]; // adjacency list
 
@@ -135,7 +135,7 @@ public class Graph_practice {
         // DFS(graph, 0, vis);
         // }
         // }
-        // bfs(graph, V); // perform BFS traversal
+        bfs(graph, V); // perform BFS traversal
 
         int src = 0;
         int tar = 6;

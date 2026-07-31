@@ -16,6 +16,16 @@ public class Graph {
         }
     }
 
+//               10
+//      1 --------->2
+//      |          /|
+//    0 |         / |2
+//      |       10  |
+//      ↓      /    |
+//      3 <---      |
+//      ^           |
+//      |           |
+//      ----- -1 ----
     // Create graph using adjacency list representation
     public static void creategraph(ArrayList<Edge> graph[]){
         // Step 1: Initialize each index with an empty ArrayList
@@ -53,8 +63,8 @@ public class Graph {
 
         // Example: print all neighbours of vertex 2
         // neighbours = all destination vertices connected from src = 2 with weight
-        for(int i = 0; i < graph[2].size(); i++){
-            Edge e = graph[2].get(i);   // get edge from adjacency list
+        for(int i = 0; i < graph[3].size(); i++){
+            Edge e = graph[3].get(i);   // get edge from adjacency list
             System.out.println(e.dest + "," + e.wght); // print destination node
         }
     }

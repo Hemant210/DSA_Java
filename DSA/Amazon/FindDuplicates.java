@@ -8,7 +8,8 @@ public class FindDuplicates {
         Set<Integer> seenElements = new HashSet<>();
         Set<Integer> duplicate = new HashSet<>();
 
-        for (int element : arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int element = arr[i];
             if (!seenElements.add(element)) {
                 duplicate.add(element);
             }
