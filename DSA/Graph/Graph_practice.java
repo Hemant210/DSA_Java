@@ -128,20 +128,20 @@ public class Graph_practice {
         ArrayList<Edge> graph[] = new ArrayList[V]; // adjacency list
 
         createGraph(graph); // build graph
-        // boolean vis[] = new boolean[V];
-
-        // for(int i = 0; i < V; i++){
-        // if (vis[i] == false) {
-        // DFS(graph, 0, vis);
-        // }
-        // }
-        bfs(graph, V); // perform BFS traversal
-
-        int src = 0;
-        int tar = 6;
         boolean vis[] = new boolean[V];
-        vis[src] = true;
-        printAllpath(graph, src, tar, "" + src, vis);
-        System.out.println();
+
+        for(int i = 0; i < V; i++){
+        if (vis[i] == false) {
+        DFS(graph, 0, vis);
+        }
+    }
+        //bfs(graph, V); // perform BFS traversal
+
+        // int src = 0;
+        // int tar = 6;
+        // boolean vis[] = new boolean[V];
+        // vis[src] = true;
+        // printAllpath(graph, src, tar, "" + src, vis);
+        // System.out.println();
     }
 }
