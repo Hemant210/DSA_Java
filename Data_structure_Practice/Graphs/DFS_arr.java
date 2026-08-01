@@ -48,6 +48,13 @@ public class DFS_arr {
     }
 
     public static ArrayList<Integer> dfs(ArrayList<Edge> graph[]){
+    //      1
+    //     /
+    //    0
+    //   / \
+    //  2   3
+    //  |
+    //  4
         ArrayList<Integer> ans = new ArrayList<>();
         boolean vis[] = new boolean[graph.length];
 
