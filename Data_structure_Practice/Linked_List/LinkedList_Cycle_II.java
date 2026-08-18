@@ -1,6 +1,6 @@
 package Data_structure_Practice.Linked_List;
 
-public class LinkedList_Cycle {
+public class LinkedList_Cycle_II {
     static class ListNode {
         int val;
         ListNode next;
@@ -11,20 +11,33 @@ public class LinkedList_Cycle {
         }
     }
 
-    public static boolean Is_Cycle(ListNode head) {
+    public static ListNode Is_Cycle(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
+        boolean iscycle = false;
 
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
 
             if (slow == fast) {
-                return true;
+                iscycle = true;
+                break;
             }
         }
 
-        return false;
+        if (!iscycle) {
+            return null;
+        }
+
+        slow = head;
+
+        while (slow != fast) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+
+        return slow;
     }
 
     public static void main(String[] args) {
@@ -36,7 +49,6 @@ public class LinkedList_Cycle {
         // pos = 1 means last node (-4) points back to node at index 1 (value 2)
         head.next.next.next.next = head.next;
 
-        System.out.println(Is_Cycle(head));
-
+        System.err.println(Is_Cycle(head));
     }
 }
