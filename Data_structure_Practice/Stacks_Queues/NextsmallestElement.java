@@ -12,11 +12,12 @@ public class NextsmallestElement {
                 s.pop();
             }
 
-            if (s.isEmpty()) {
-                ans[i] = -1;
-            } else {
-                ans[i] = s.peek();
-            }
+            ans[i] = s.isEmpty() ? -1 : s.peek();
+            // if (s.isEmpty()) {
+            //     ans[i] = -1;
+            // } else {
+            //     ans[i] = s.peek();
+            // }
 
             s.push(nums[i]);
 

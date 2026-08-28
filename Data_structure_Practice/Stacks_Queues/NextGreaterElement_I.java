@@ -16,11 +16,12 @@ public class NextGreaterElement_I {
                 st.pop();
             }
 
-            if (st.isEmpty()) {
-                NGE[i] = -1;
-            } else {
-                NGE[i] = st.peek();
-            }
+            NGE[i] = st.isEmpty() ? -1 : st.peek();
+            // if (st.isEmpty()) {
+            //     NGE[i] = -1;
+            // } else {
+            //     NGE[i] = st.peek();
+            // }
 
             st.push(nums1[i]);
         }
