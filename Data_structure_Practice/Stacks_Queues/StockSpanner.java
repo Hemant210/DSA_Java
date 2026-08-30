@@ -10,15 +10,16 @@ public class StockSpanner {
         Stack<Integer> stack = new Stack<>();
 
         for(int i = 0; i < price.length; i++){
-            while (!stack.isEmpty() && price[stack.peek()] <= price[i]) {
+            while (!stack.isEmpty()  && price[stack.peek()] <= price[i]) {
                 stack.pop();
             }
 
-            if (stack.isEmpty()) {
-                ans[i] = i + 1;
-            } else {
-                ans[i] = i - stack.peek();
-            }
+            ans[i] = stack.isEmpty() ? i + 1 : i - stack.peek();
+            // if (stack.isEmpty()) {
+            //     ans[i] = i + 1;
+            // } else {
+            //     ans[i] = i - stack.peek();
+            // }
 
             stack.push(i);
         }

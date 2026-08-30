@@ -4,12 +4,13 @@ public class Missing_number {
     public static int Miss(int[] nums) {
 
         int sum = 0;
+        int n = nums.length;
 
-        for (int i = 0; i < nums.length; i++) {
-            sum = sum + nums[i];
+        for (int i = 0; i < n; i++) {
+            sum += nums[i];
         }
 
-        int act_sum = (nums.length * (nums.length + 1)) / 2;
+        int act_sum = (n * (n + 1)) / 2;
         int miss_sum = act_sum - sum;
 
         return miss_sum;

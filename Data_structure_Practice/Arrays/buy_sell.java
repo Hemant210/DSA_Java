@@ -51,8 +51,8 @@ public class buy_sell {
         buy_sell s = new buy_sell();
 
         //int result = s.Max_profit(prices);
-        //int result = s.Maximum_profit(prices);
-        int result = s.buy_sel(prices);
+        int result = s.Maximum_profit(prices);
+        //int result = s.buy_sel(prices);
 
         System.out.println(result);
     }
