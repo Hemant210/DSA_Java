@@ -20,6 +20,6 @@ public class LRU {
     ListNode tail;
 
     public static void main(String[] args) {
-
+        
     }
 }
