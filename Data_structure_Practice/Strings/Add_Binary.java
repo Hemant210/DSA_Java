@@ -33,7 +33,7 @@ public class Add_Binary {
     // Time Complexity :- O(max(m,n)) & Space Complexity :- O(max(m,n))
     // Approach 2: Convert Binary -> Decimal -> Binary
     public String binary(String a, String b) {
-
+   
         int x = Integer.parseInt(a, 2);
         int y = Integer.parseInt(b, 2);
 
