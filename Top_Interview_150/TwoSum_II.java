@@ -1,6 +1,5 @@
 package Top_Interview_150;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class TwoSum_II {
