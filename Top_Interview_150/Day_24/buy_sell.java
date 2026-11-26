@@ -1,4 +1,4 @@
-package Top_Interview_150;
+package Top_Interview_150.Day_24;
 
 public class buy_sell {
     public static int Max_profit(int[] prices) {
